@@ -19,7 +19,9 @@
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{pdfpages}
+\usepackage{bbm}
 
+\usepackage[paper=a4paper,left=20mm,right=20mm,top=20mm,bottom=20mm]{geometry}
 
 \newcommand*\laplace{\mathop{}\!\mathbin\bigtriangleup}
 \newcommand*\dalembert{\mathop{}\!\mathbin\Box}
@@ -59,13 +61,13 @@ Zur Elektrodynamik bewegter Körper
 \subsubsection{1. Postulat}
 Die Naturgesetze gelten in jedem
 \underline{Inertialsystem} in der gleichen Weise.\\
-Inertialsysteme: Bezussysteme in dennen ein sich kräftefrei bewegender Körper,
-konstante Geschwindigkeit besitz.
-$\rightarrow$ verschidene Inertialsysteme bewegen sich relativ zueinander mit
+Inertialsysteme: Bezugssysteme in denen ein sich kräftefrei bewegender Körper,
+konstante Geschwindigkeit besitzt.
+$\rightarrow$ verschiedene Inertialsysteme bewegen sich relativ zueinander mit
 konstanter Geschwindigkeit.
 \subsubsection{2.Postulat}
 Prinzip der in jedem Inertialsystem konstanten Lichtgeschwindigkeit.\\
-Prinziep: es gibt eine maximale Signalgeschwindigkeit\\
+Prinzip: es gibt eine maximale Signalgeschwindigkeit\\
 Wirkungsausbreitung = Lichtgeschwindigkeit $c=2.99*10^8\frac{m}{s}$\\
 (Klassische Mechanik: Grenzfall: $c \rightarrow \infty$)\\
 z.B. $\Pi^0 \rightarrow \gamma + \gamma$\\
@@ -73,13 +75,13 @@ $\rightarrow$ Geschwindigkeiten können nicht trivial addiert werden\\
 $\rightarrow$ Zeit muss in der Speziellen Relativitätstheorie mit transformiert
 werden\\
 $\rightarrow$ 4-dimensionale Schreibweise einer vierdimensionalen Raumzeit.\\
-Dazu spricht man in der spezellen Relativitätstheorie von einem Ereignis oder
+Dazu spricht man in der speziellen Relativitätstheorie von einem Ereignis oder
 Weltpunkt $(t,\vec{x})$ (Raum-Zeit-Punkte). Die physikalische Dimension wird zu
 $x^0=ct$ normiert.\\
 $\rightarrow x^{\mu}=(x^0,x^1,x^2,x^3)=(x^0,\vec{x})$\\
 $\vec{x}=(x^1,x^2,x^3)\leftarrow x^i$\\
 Aus der Konstanz der Lichtgeschwindigkeit in allen Koordinatensystemen folgt
-das der 4-Abstand zweier Erieignisse a, b mit den Weltpunkten
+das der 4-Abstand zweier Ereignisse a, b mit den Weltpunkten
 $x^{\mu}_a$,$x^{\mu}_b$, die durch ein Lichtsignal verbunden sind, konstant
 ist.
 \begin{align}
@@ -95,7 +97,6 @@ Kovariante Komponenten von 4er Vektoren :$x_{\mu \leftarrow}=g_{\mu
 $g_{\mu \nu} =$ Metrischer Tensor (Tensor 2. Stufe)
 	     = diag(1,-1,-1,-1)\\
 		  $g_{00}=1$ $g_{ii}=-1$\\
-		  
 
 \paragraph{Einsteinsche Summenkonvention:} 
 $\sum$ wird implizit über alle Indizepaare gebildet, bei denen ein Index oben
@@ -113,10 +114,10 @@ S^2_{ab}&=g_{\mu \nu}(x_a-x_b)^{\mu}*(x_a-x_b)^{\nu}\\
 \end{align}
 $\rightarrow$ Invarianz des 4-Abstandes?\\
 $\Rightarrow$ 4-Abstand (Metrik)\\
-für differentielle Abstände $dx^{\mu}=(cdt,d\vec{x})$ gilt:
+für differentielle Abstände $\mathrm{d}x^{\mu}=(c\mathrm{d}t,\mathrm{d}\vec{x})$ gilt:
 \begin{align}
-dS^2=dx^2&=g_{\mu \nu}*dx^{\mu}*dx^{\nu}\\
-&=c^2*dt^2-d\vec{x}^2
+\mathrm{d}S^2=\mathrm{d}x^2&=g_{\mu \nu}*\mathrm{d}x^{\mu}*\mathrm{d}x^{\nu}\\
+&=c^2*\mathrm{d}t^2-\mathrm{d}\vec{x}^2
 \end{align}
 Hier ist die Metrik durch den metrischen Tensor gegeben.
 \begin{align}
@@ -128,23 +129,23 @@ $g:\ x^{\mu} \mapsto x_{\mu}=g_{\mu
 
 \subsection{Geometrie}
 Eigenzeit: wähle ein Inertialsystem K in dem ein Körper in Ruhe ist
-$d\vec{x}=0$, $dt\neq0$, $dx^0=c*dt$ mit der Schreibweise $d\tau$.\\
-Im Koordinatensystem $K^{'}$ des Beobachters in dem sich der Köror bewegt gelte
-nun $d\vec{x}^{'}\neq0$, $dt^{'}\neq0$\\
+$\mathrm{d}\vec{x}=0$, $\mathrm{d}t\neq0$, $\mathrm{d}x^0=c*\mathrm{d}t$ mit der Schreibweise $\mathrm{d}\tau$.\\
+Im Koordinatensystem $K^{'}$ des Beobachters in dem sich der Körper bewegt gelte
+nun $\mathrm{d}\vec{x}^{'}\neq0$, $\mathrm{d}t^{'}\neq0$\\
 \subsubsection{Invarianz des 4-Abstands} 
 \begin{align}
-ds^2&=c^2*d\tau^2=c^2*(dt^{'})^2-(dx^{1'})^2-(dx^{2'})^2-(dx^{3'})^2\\
+\mathrm{d}s^2&=c^2*\mathrm{d}\tau^2=c^2*(\mathrm{d}t^{'})^2-(\mathrm{d}x^{1'})^2-(\mathrm{d}x^{2'})^2-(\mathrm{d}x^{3'})^2\\
 \Rightarrow
-d\tau&=dt^{'}*\sqrt{1-\frac{(dx^{1'})^2+(dx^{2'})^2+(dx^{3'})^2}{c^2
-(dt^{'})^2}}\\
-&=dt^{'}*\sqrt{1-\frac{1}{c^2}\left(\frac{d|\vec{x^{'}}}{dt^{'}}\right)^2}\\
-&=dt^{'}*\sqrt{1-\beta^2} mit \beta=\frac{v}{c}\leq1 \\
-d\tau&=\frac{ds}{c}
+\mathrm{d}\tau&=\mathrm{d}t^{'}*\sqrt{1-\frac{(\mathrm{d}x^{1'})^2+(\mathrm{d}x^{2'})^2+(\mathrm{d}x^{3'})^2}{c^2
+(\mathrm{d}t^{'})^2}}\\
+&=\mathrm{d}t^{'}*\sqrt{1-\frac{1}{c^2}\left(\frac{\mathrm{d}|\vec{x^{'}}|}{\mathrm{d}t^{'}}\right)^2}\\
+&=\mathrm{d}t^{'}*\sqrt{1-\beta^2}\text{ mit }\beta=\frac{v}{c}\leq1 \\
+\mathrm{d}\tau&=\frac{\mathrm{d}s}{c}
 \end{align}
 
 für beliebige Bewegungen:
 \begin{align}
-\tau=\int dt^{'}\sqrt{1-\beta^2}
+\tau=\int \mathrm{d}t^{'}\sqrt{1-\beta^2}
 \end{align}
 \subsection{Lorentz-Transformationen}
 Galilei-Trafo.: nicht-relativistische Kinematik
@@ -167,37 +168,37 @@ darstellt also $ \mathbb{R}^T \mathbb{R}= 1$)\\
 
 z.B. Drehung um $x^3$-Achse
 \begin{align}
-&\mathbb{R}=\begin{pmatrix} cos\theta & sin\theta & 0 \\ -sin\theta
-& cos\theta &0 \\ 0&0&1\end{pmatrix}\\
+&\mathbb{R}=\begin{pmatrix} \cos\theta & \sin\theta & 0 \\ -\sin\theta
+& \cos\theta &0 \\ 0&0&1\end{pmatrix}\\
 &\vec{x^{'}}= \mathbb{R}*\vec{x},\vec{x^{'}}^2= \vec{x}^2\\
-&cos^2\theta+sin^2\theta=1
+&\cos^2\theta+\sin^2\theta=1
 \end{align}
 z.B. Versuche
 \begin{align}
-\Lambda^\mu_\nu= \begin{pmatrix} cosh\phi & sinh\phi& 0&0\\ sinh\phi&cosh\phi
+\Lambda^\mu_\nu= \begin{pmatrix} \cosh\phi & \sinh\phi& 0&0\\ \sinh\phi&\cosh\phi
 &0&0\\0&0 &1&0 \\0&0 &0&1 \end{pmatrix}\\
-cosh^2\phi - sinh^2\phi=1
+\cosh^2\phi - \sinh^2\phi=1
 \end{align}
 Dies entspricht einer Drehung mit einem Imaginären Drehwinkel.\\
 im K-System $K$: Komponenten $x^\mu$\\
 im K-System $K^{'}$: Komponenten $x^{'\mu}$\\
-$K$ und $K^{'}$ bewegen sich relativ zueiander mit konstanter Geschwindigkeit
-$v$, so daß $\beta=\frac{v}{c}=-tanh\psi$\\
+$K$ und $K^{'}$ bewegen sich relativ zueinander mit konstanter Geschwindigkeit
+$v$, so dass $\beta=\frac{v}{c}=-\tanh\psi$\\
 Ursprung von $K^{'}$: 
 \begin{align}
-x^{'\mu}&=0=sinh\psi*x^0+cosh\psi*x^1\\
+x^{'\mu}&=0=\sinh\psi*x^0+\cosh\psi*x^1\\
 \Rightarrow
-\frac{x^1}{x^0}&=\frac{x^1}{c*t}=-\frac{sinh\psi}{cosh\psi}=-tanh\psi\\
-tanh\psi&=-\beta \\
-sinh\psi&=-\frac{\beta}{\sqrt{1-\beta^2}}, &
-cosh\psi=-\frac{1}{\sqrt{1-\beta^2}}
+\frac{x^1}{x^0}&=\frac{x^1}{c*t}=-\frac{\sinh\psi}{\cosh\psi}=-\tanh\psi\\
+\tanh\psi&=-\beta \\
+\sinh\psi&=-\frac{\beta}{\sqrt{1-\beta^2}}, &
+\cosh\psi=-\frac{1}{\sqrt{1-\beta^2}}
 \end{align}
 Abkürzung: $\gamma=\frac{1}{\sqrt{1-\beta^2}}$
 \begin{align}
 \Rightarrow \Lambda^\mu_\nu= \begin{pmatrix} \gamma & \gamma \beta & 0&0\\
 \gamma \beta & \gamma &0&0\\0&0 &1&0 \\0&0 &0&1 \end{pmatrix}
 \end{align}
-Diese spezielle Lorentz-Transforation wird "boost" genannt.\\
+Diese spezielle Lorentz-Transformation wird "boost" genannt.\\
 Sie ist hier jedoch ausschließlich in 1-Richtung. In 2-Richtung und 3-Richtung
 werden einfach die entsprechenden Zeilen vertauscht. Andere Richtungen lassen
 sich mit Drehungen realisieren. Beliebige Lorentz Transformationen der Form
@@ -209,22 +210,25 @@ x^{'1}=\frac{x^1+vt}{\sqrt{1-\beta^2}}, x^{'2}=x^2, x^{'3}=x^3,
 t^{'}=\frac{t+\frac{\beta}{c}*x^1}{\sqrt{1-\beta^2}}
 \end{align}
 
-$\Rightarrow$ Löngenkontraktion, Zeitdilatiation\\
+$\Rightarrow$ Längenkontraktion, Zeitdilatiation\\
 Ansatz: 4-Abstand ist invariant\\
-differentiell: $ds^2=(ds^{'})^2$\\
-aus Definition folgt: $ds^2=c^2dt^2-d\vec{x}^2$\\
-Lichtsignal: $ds^2=0$
-Ansatz: $ds^{'}=a*ds$\\
+differentiell: $\mathrm{d}s^2=(\mathrm{d}s^{'})^2$\\
+aus Definition folgt: $\mathrm{d}s^2=c^2\mathrm{d}t^2-\mathrm{d}\vec{x}^2$\\
+Lichtsignal: $\mathrm{d}s^2=0$
+Ansatz: $\mathrm{d}s^{'}=a*\mathrm{d}s$\\
 Aus der Homogenität und Isotropie des Raumes folgt,dass das $a$ von keiner
-der Koordinaten abhängen kann. $\Rightarrow a(x,\frac{dx}{dt})=a(|\vec{v}|)$\\
-1. $K_1$-System ds
-2. $K_2$-System relativ beweg zu $K_1$ mit $\vec{v_{12}}$
-3. $K_3$-System relativ beweg zu $K_1$ mit $\vec{v_{13}}$
+der Koordinaten abhängen kann. $\Rightarrow a(x,\frac{\mathrm{d}x}{\mathrm{d}t})=a(|\vec{v}|)$\\
+Betrachte nun 3 Koordinatensysteme:
+\begin{enumerate}
+  \item $K_1$-System: ds
+  \item $K_2$-System: relativ beweg zu $K_1$ mit $\vec{v_{12}}$
+  \item $K_3$-System: relativ beweg zu $K_1$ mit $\vec{v_{13}}$
+\end{enumerate}
 $\Rightarrow$ $K_2$ relativ zu $K_3$ bewegt mit $\vec{v_{23}}$
 \begin{align}
-ds \rightarrow ds^{'}&=a(|\vec{v}_{12}|)*ds (K_1 \rightarrow K_2)\\
-ds^{''}&=a(|\vec{v}_{13}|)*ds (K_1 \rightarrow K_3)\\
-ds^{''}&=a(|\vec{v}_{23}|)*ds^{'} (K_2 \rightarrow K_3)\\
+\mathrm{d}s \rightarrow \mathrm{d}s^{'}&=a(|\vec{v}_{12}|)*\mathrm{d}s (K_1 \rightarrow K_2)\\
+\mathrm{d}s^{''}&=a(|\vec{v}_{13}|)*\mathrm{d}s (K_1 \rightarrow K_3)\\
+\mathrm{d}s^{''}&=a(|\vec{v}_{23}|)*\mathrm{d}s^{'} (K_2 \rightarrow K_3)\\
 \Rightarrow  a(|\vec{v}_{13}|)&=a(|\vec{v}_{12}|)*a(|\vec{v}_{23}|)
 \end{align}
 Da gilt $\vec{v}_{13}=\vec{v}_{12}+\vec{v}_{23}$ liegt eine Winkelabhängigkeit
@@ -254,13 +258,13 @@ Skalarfelder $\Phi(x)$ mit $x$ 4-Vektor
 Vektorfelder $V^\mu(x)$
 Transformationsverhalten:
 \begin{align}
-\Phi '(x ')=\Phi(x) \\
-x^\mu {}'=\Lambda^\mu{}_\nu x^\nu\\
-V^\mu {}'(x)=\Lambda^\mu{}_\nu V^\mu(x)
+\Phi '(x ')&=\Phi(x) \\
+x^\mu {}'&=\Lambda^\mu{}_\nu x^\nu\\
+V^\mu {}'(x)&=\Lambda^\mu{}_\nu V^\mu(x)
 \end{align}
 Beispiele:\\
 für $\Phi$: Potential, Ladungsdichte\\
-für $V^\mu(x)$: Stromdichte $\frac{dx^\mu(\tau)}{d\tau}$\\
+für $V^\mu(x)$: Stromdichte $\frac{\mathrm{d}x^\mu(\tau)}{\mathrm{d}\tau}$\\
 
 \subsection{Differentialoperatoren}
 (sillschweigend: Steitigkeit, Differenzierbarkeit ist implizit vorrausgesetzt)
@@ -270,18 +274,18 @@ Skalarfeld $\rightarrow$ Gradientenfeld
 &=(\frac{1}{c}\frac{\partial\Phi}{\partial t},\vec{\nabla}\Phi(x))\\
 \partial^\mu\Phi(x)&=(\frac{1}{c}\frac{\partial\Phi}{\partial
 t},-\vec{\nabla}\Phi(x))\\
-auch (\vec{\nabla}\Phi(x))^i&=\frac{\partial}{\partial
+\text{auch }(\vec{\nabla}\Phi(x))^i&=\frac{\partial}{\partial
 x^i}=\partial^i=(grad\Phi)^i
 \end{align}
 Wobei in der letzten Gleichung $i$ eine Komponente selektiert.
 \begin{align}
-Bew.:(\partial_\mu\Phi(x)){}'&=\frac{\partial}{\partial x^\mu{}'}\Phi{}'(x{}')\\
+\text{Bew.: }(\partial_\mu\Phi(x)){}'&=\frac{\partial}{\partial x^\mu{}'}\Phi{}'(x{}')\\
 &=\frac{\partial}{\partial x^\mu{}'}\Phi(x(x{}'))\\
 &=\frac{\partial}{\partial x^\nu}\Phi(x)*\frac{\partial x^\nu}{\partial
 x^\mu{}'}\\ 
 &=(\Lambda^{-1})^\nu{}_\mu\frac{\partial}{\partial x^\nu}\Phi(x)\\
 &=(\Lambda^{-1})_\mu{}^\nu\frac{\partial}{\partial x^\nu}\Phi(x)\\
-mit Ü: \Lambda^T\Lambda=\mathbb(1)\\
+\text{mit }Ü: \Lambda^T\Lambda&=\mathbbm{1}\\
 \Rightarrow \Lambda^-1&=\Lambda^T
 \end{align}
 4-Divergenz $\partial_\mu V^\mu(x)$ ist eine skalare Größe
@@ -312,23 +316,23 @@ V_m=(\vec{\nabla}x\vec{V})^k
 
 \subsection{Integration in D=4}
 in D=3 
-\subsubsection{Volumenintegral} $\int_V dV \phi(\vec{x})=\int dx_1 \int dx_2
-  \int dx_3 \phi(x_1,x_2,x_3)$ \\
-  $\rightarrow in D4 $\\ $\int_G d\Omega \phi(x)=\int dx^0\int dx^1 \int dx^2
-  \int dx^3 \phi(x^0,x^1,x^2,x^3)$\\ mit dem Gebiet $G$ im 4-D Raum\\
+\subsubsection{Volumenintegral} $\int_V \mathrm{d}V \phi(\vec{x})=\int \mathrm{d}x_1 \int \mathrm{d}x_2
+  \int \mathrm{d}x_3 \phi(x_1,x_2,x_3)$ \\
+  $\rightarrow in D4 $\\ $\int_G \mathrm{d}\Omega \phi(x)=\int \mathrm{d}x^0\int \mathrm{d}x^1 \int \mathrm{d}x^2
+  \int \mathrm{d}x^3 \phi(x^0,x^1,x^2,x^3)$\\ mit dem Gebiet $G$ im 4-D Raum\\
   Tansformationsverhalten: \\ für $G=$ der gesamte Raum
-  \\$\Omega'=dx^0{}'dx^1{}'dx^2{}'dx^3{}'=^?d\Omega$\\$x^\mu{}'=\Lambda^\mu{}_\nu
+  \\$\Omega'=\mathrm{d}x^0{}'\mathrm{d}x^1{}'\mathrm{d}x^2{}'\mathrm{d}x^3{}'=^?\mathrm{d}\Omega$\\$x^\mu{}'=\Lambda^\mu{}_\nu
   x^\nu$\\ 
   Substitution: Jacobi Determinante:\\ $J=\left|\frac{\partial
   x^\mu{}'}{\partial x^\nu}\right|=\left|\Lambda^\mu{}_\nu\right|=1$ \\ 
-  $\Rightarrow \int d\Omega'\ldots=\int J*d\Omega\ldots=\int d\Omega\ldots$
+  $\Rightarrow \int \mathrm{d}\Omega'\ldots=\int J*\mathrm{d}\Omega\ldots=\int \mathrm{d}\Omega\ldots$
 \subsubsection{Flächenintegral}
 in D=3
 \begin{align}
-\int_F d\vec{f}*\vec{V}(\vec{x})=\int d\sigma \vec{n}*\vec{V(\vec{x})}
+\int_F \mathrm{d}\vec{f}*\vec{V}(\vec{x})=\int \mathrm{d}\sigma \vec{n}*\vec{V(\vec{x})}
 \end{align}
-$d\vec{f}=$inf.Flächenelement\\
-$dr=$Flächeninhalt\\
+$\mathrm{d}\vec{f}=$inf.Flächenelement\\
+$\mathrm{d}r=$Flächeninhalt\\
 $\vec{n}=$Einheitsvektor$\perp$ auf $\vec{F}$\\
 (Beispiel: Integral über Stromdichte $\rightarrow$ Fluß)\\
 für Fläche: Parametrisierung $\vec{x}(s,t)$
@@ -336,28 +340,28 @@ für Fläche: Parametrisierung $\vec{x}(s,t)$
 Tangentenvektoren $\vec{e}_s=\frac{\partial\vec{x}}{\partial s}$ \\
 $\vec{e}_t=\frac{\partial\vec{x}}{\partial t}$\\
 Flächennormale in P: $\vec{n}=\vec{e}_s x \vec{e}_t$
-Flächeninhalt $\propto ds*dt$\\
-$\Rightarrow d\vec{f}=ds*dt*\frac{\partial\vec{x}}{\partial
+Flächeninhalt $\propto \mathrm{d}s*\mathrm{d}t$\\
+$\Rightarrow \mathrm{d}\vec{f}=\mathrm{d}s*\mathrm{d}t*\frac{\partial\vec{x}}{\partial
 s}x\frac{\partial\vec{x}}{\partial t}$\\
-$\int d\vec{f}*\vec{V}=\int df_i*V_i=\int ds \int dt
+$\int \mathrm{d}\vec{f}*\vec{V}=\int \mathrm{d}f_i*V_i=\int \mathrm{d}s \int \mathrm{d}t
 (\frac{\partial\vec{x}}{\partial s}x\frac{\partial\vec{x}}{\partial t})_i *
 V_i$\\
-$df_i=dsdt\epsilon^{ijk}\frac{\partial x_j}{\partial
+$\mathrm{d}f_i=\mathrm{d}s\mathrm{d}t\epsilon^{ijk}\frac{\partial x_j}{\partial
 s}x\frac{\partial x_k}{\partial t}$\\
-$df_{jk}=ds dt \left(\frac{\partial x_j}{\partial
+$\mathrm{d}f_{jk}=\mathrm{d}s \mathrm{d}t \left(\frac{\partial x_j}{\partial
 s}x\frac{\partial x_k}{\partial t}-\frac{\partial x_k}{\partial
 s}x\frac{\partial x_j}{\partial t}\right)$\\
-$df^i=\frac{1}{2}*\epsilon^{ijk} df_{jk}$\\
+$\mathrm{d}f^i=\frac{1}{2}*\epsilon^{ijk} \mathrm{d}f_{jk}$\\
 Integration über eine zweidimensionale Fläche in D=4\\
-Flächenelement: $df^{\mu\nu}=ds dt \left(\frac{\partial x^\mu}{\partial
+Flächenelement: $\mathrm{d}f^{\mu\nu}=\mathrm{d}s \mathrm{d}t \left(\frac{\partial x^\mu}{\partial
 s}\frac{\partial x^\nu}{\partial t}-\frac{\partial x^\nu}{\partial s}
 \frac{\partial x^\mu}{\partial t} \right)$\\
 %mit ~ drüber
 dazu dual:
-$d\tilde{f}^{\mu\nu}=\frac{1}{2}\epsilon^{\mu\nu\rho\sigma}df_{\rho\sigma}$\\
-Flächenintegral:$\int_F d\tilde{f_{\mu\nu}} *I*\ldots$\\
+$\mathrm{d}\tilde{f}^{\mu\nu}=\frac{1}{2}\epsilon^{\mu\nu\rho\sigma}\mathrm{d}f_{\rho\sigma}$\\
+Flächenintegral:$\int_F \mathrm{d}\tilde{f_{\mu\nu}} *I*\ldots$\\
 Das Verhalten der durch das Integral definierten Größe ergibt sich nach:\\
-$\int_F d\tilde{f}_{\mu\nu} *I^{\mu\nu}=[Pseudo]Skalar$
+$\int_F \mathrm{d}\tilde{f}_{\mu\nu} *I^{\mu\nu}=[Pseudo]Skalar$
 Falls $I$ eine skalare Funktion ist bekomen wir einen Tensor 2.Stufe als
 Ergebnis des Integrals.\\
 \subsubsection{Integration über 3-Dimensionale Hyperflächen}
@@ -366,21 +370,21 @@ Tangentenvektoren $e^\mu_s=\frac{\partial x^\mu}{\partial s}$,
 $e^\mu_t=\frac{\partial x^\mu}{\partial t}$, $e^\mu_u=\frac{\partial
 x^\mu}{\partial u}$\\
 in D=3: $(\vec{e}_s x \vec{e}_t) * \vec{e}_u$\\
-in D=4: $dS^\mu\nu\rho=\begin{pmatrix} 
-dx^\mu_s & dx^\nu_s & dx^\rho_s \\
-dx^\mu_t & dx^\nu_t & dx^\rho_t \\ 
-dx^\mu_u & dx^\nu_u & dx^\rho_u \\\end{pmatrix}
+in D=4: $\mathrm{d}S^\mu\nu\rho=\begin{pmatrix} 
+\mathrm{d}x^\mu_s & \mathrm{d}x^\nu_s & \mathrm{d}x^\rho_s \\
+\mathrm{d}x^\mu_t & \mathrm{d}x^\nu_t & \mathrm{d}x^\rho_t \\ 
+\mathrm{d}x^\mu_u & \mathrm{d}x^\nu_u & \mathrm{d}x^\rho_u \\\end{pmatrix}
 $
-z.B.: $dx^\mu_s=ds\frac{\partial x^\mu}{\partial s}$ usw.\\
-dual zu $dS^{\mu\nu\rho}: dS^\mu~=\frac{1}{6}
-\epsilon^{\mu\nu\rho\sigma}*dS_{\nu\rho\sigma}$\\
-$\int_H dS^\mu~ I_\mu$\\
-$dS^\mu~$ ist 4-Vektor
+z.B.: $\mathrm{d}x^\mu_s=\mathrm{d}s\frac{\partial x^\mu}{\partial s}$ usw.\\
+dual zu $\mathrm{d}S^{\mu\nu\rho}: \mathrm{d}S^\mu~=\frac{1}{6}
+\epsilon^{\mu\nu\rho\sigma}*\mathrm{d}S_{\nu\rho\sigma}$\\
+$\int_H \mathrm{d}S^\mu~ I_\mu$\\
+$\mathrm{d}S^\mu~$ ist 4-Vektor
 $\perp$ auf allen Richtugen in H
 z.B. Hyperfläche $\mathbb{R}^3$
 Parametrisierung: $s=x^1,t=x^2,u=x^3$\\
-$dS^{\mu\nu\rho}\rightarrow dx^1dx^2dx^3$
-$dS^{0}~=dx^1dx^2dx^3$
+$\mathrm{d}S^{\mu\nu\rho}\rightarrow \mathrm{d}x^1\mathrm{d}x^2\mathrm{d}x^3$
+$\mathrm{d}S^{0}~=\mathrm{d}x^1\mathrm{d}x^2\mathrm{d}x^3$
 
 
 \subsubsection{Wegintegrale}
@@ -388,13 +392,13 @@ $dS^{0}~=dx^1dx^2dx^3$
   \item in $D=3$
 \end{itemize}
 \begin{align}
-\int_C d\vec{x}*\vec{V}(\vec{x})
+\int_C \mathrm{d}\vec{x}*\vec{V}(\vec{x})
 \end{align}
 Parametrisierung von C:
 \begin{align}
 \vec{x}=\vec{x}(\sigma)\\
 \frac{\partial\vec{x}}{\partial\sigma}\\
-\Rightarrow\int_C d\sigma\\
+\Rightarrow\int_C \mathrm{d}\sigma\\
 \frac{\partial\vec{x}}{\partial\sigma}*\vec{V}(\vec{x(\sigma)})
 \end{align}
 
@@ -402,13 +406,13 @@ Parametrisierung von C:
   \item in $D=4$
 \end{itemize}
 \begin{align}
-\int_C dx^\mu*V_\mu(x)
+\int_C \mathrm{d}x^\mu*V_\mu(x)
 \end{align}
 Parametrisierung von C:
 \begin{align}
 x^\mu=x^\mu(\sigma)\\
 \frac{\partial x^\mu}{\partial\sigma}\\
-\Rightarrow\int_C d\sigma \frac{\partial x^\mu}{\partial\sigma}*
+\Rightarrow\int_C \mathrm{d}\sigma \frac{\partial x^\mu}{\partial\sigma}*
 V^\mu(x(\sigma))\\
 \sigma\rightarrow s \rightarrow\tau
 \end{align}
@@ -419,13 +423,13 @@ V^\mu(x(\sigma))\\
 \end{itemize}
 in 3-D
 \begin{align}
-\int_V d^3x \vec\nabla \vec{V} = \int_{\partial V} d\vec{f} \vec{V}
+\int_V \mathrm{d}^3x \vec\nabla \vec{V} = \int_{\partial V} \mathrm{d}\vec{f} \vec{V}
 \end{align}
 mit gebenenem Volumen $V$ und dessen Rand $\partial V$
 
 in 4-D
 \begin{align}
-\int_G d\Omega \partial_\mu V^\mu = \int_{\partial G} d\tilde{S}_\mu V^\mu
+\int_G \mathrm{d}\Omega \partial_\mu V^\mu = \int_{\partial G} \mathrm{d}\tilde{S}_\mu V^\mu
 \end{align}
 
 \begin{itemize}
@@ -434,14 +438,14 @@ in 4-D
 
 in 3-D:
 \begin{align}
-\int_F d\vec{f} (\vec{\nabla}x\vec{V}) = \int_{\partial F} d\vec{x} \vec{V}(x)
+\int_F \mathrm{d}\vec{f} (\vec{\nabla}x\vec{V}) = \int_{\partial F} \mathrm{d}\vec{x} \vec{V}(x)
 \end{align}
 
 in 4-D
 \begin{align}
-\int_F df^{\mu\nu} \partial_\mu V_\nu= \int_F df^{\mu\nu}
+\int_F \mathrm{d}f^{\mu\nu} \partial_\mu V_\nu= \int_F \mathrm{d}f^{\mu\nu}
 \frac{1}{2}(\partial_\mu V_\nu-\partial_\nu V_\mu) = \int_{\partial F}
-dx^\mu V_\mu
+\mathrm{d}x^\mu V_\mu
 \end{align}
 
 Verallgemeinerungen:\\
@@ -468,7 +472,7 @@ Prinziep der minimalen Wirkung:
   \item Lagrangefunktion L($q_i$,$\dot{q}_i$,$t$) aufstellen
   \item Wirkung aufstellen $S[q_i(t)]$ (Funktional)
   \begin{align}
-  S[q_i(t)]=\int_{t_a}^{t_b} dt L(q_i(t),\dot{q}_i(t),t)
+  S[q_i(t)]=\int_{t_a}^{t_b} \mathrm{d}t L(q_i(t),\dot{q}_i(t),t)
   \end{align}
   zu gegebenen Anfangs- und Endzeitpunkten $t_b$,$t_a$ kann das Funktional für
   beliebige Wege, auch für die physikalisch nicht relisierten, berechnet werden.
@@ -503,13 +507,13 @@ Diese muss die folgenden Bedingungen erfüllen:
   Physikalischen Erfahrung (d.h. mit den Messwerten der Experimente)
   überinstimmen
 \end{enumerate}
-$\Rightarrow$ Ansatz: $S=-\alpha\int_a^b dS$ mit $a,b\hat{=}$Anfangs- und
+$\Rightarrow$ Ansatz: $S=-\alpha\int_a^b \mathrm{d}S$ mit $a,b\hat{=}$Anfangs- und
 Endpunkte\\
 Einfachste Möglichkeit: 
 \begin{align}
-ds&=\sqrt{dx_\mu dx^\mu}\\
-ds&=cdt\sqrt{1-\beta^2}\\
-S&=-\alpha c \int_a^b dt \sqrt{1-\beta^2}
+\mathrm{d}s&=\sqrt{\mathrm{d}x_\mu \mathrm{d}x^\mu}\\
+\mathrm{d}s&=c\mathrm{d}t\sqrt{1-\beta^2}\\
+S&=-\alpha c \int_a^b \mathrm{d}t \sqrt{1-\beta^2}
 \end{align}
 $\Rightarrow$ Lagrangefunktion: 
 \begin{align} 
@@ -524,7 +528,7 @@ Wobei die Konstante $-\alpha c$ keine Relevanz für die Minimierung des Problems
 aufweist.
 \begin{align}
 \Rightarrow \frac{\alpha}{2 c}&=\frac{m}{2} \ \ \Rightarrow \alpha=m c \\
-\Rightarrow S&=-mc\int^b_a ds \\
+\Rightarrow S&=-mc\int^b_a \mathrm{d}s \\
 L&=-mc^2\sqrt{1-\beta^2}
 \end{align}
 \subparagraph{Impuls}
@@ -653,16 +657,16 @@ Kriterien
   \item physikalische Realität
 \end{enumerate}
 \begin{align}
-  \Rightarrow S_{WW}&=-\frac{e}{c}\int_a^b dx_\mu A^\mu(x)\\
+  \Rightarrow S_{WW}&=-\frac{e}{c}\int_a^b \mathrm{d}x_\mu A^\mu(x)\\
   e&=\text{Elementarladung}
 \end{align}
 (Für Teilchen der Ladung $+e$)\\
 Die Wirkung für ein Teilchen der Ladung $e$ im elektromagnetischen Feld ist:
 \begin{align}
-S&=\int^b_a\left(-mcds-\frac{e}{c}A^\mu dx_\mu\right)\\
-\Rightarrow S&=\int^b_a\left(-mcds-e\phi dt +\frac{e}{c}\vec{A}d\vec{x}\right)\\
+S&=\int^b_a\left(-mc\mathrm{d}s-\frac{e}{c}A^\mu \mathrm{d}x_\mu\right)\\
+\Rightarrow S&=\int^b_a\left(-mc\mathrm{d}s-e\phi \mathrm{d}t +\frac{e}{c}\vec{A}\mathrm{d}\vec{x}\right)\\
 \Rightarrow S&=\int^{t_b}_{t_a}\left(-mc^2\sqrt{1-\beta^2}-e\phi
-+\frac{e}{c}\vec{A}\vec{v}\right) dt\\
++\frac{e}{c}\vec{A}\vec{v}\right) \mathrm{d}t\\
 \nonumber\Rightarrow \text{Lagrangefunktion:}&\\
 L&=-mc^2\sqrt{1-\beta^2}-\underbrace{e\phi+\frac{e}{c}\vec{A}\vec{v}}_{\substack{\text{Term
 für}\\\text{Wechselwirkung}}}\\
@@ -687,25 +691,25 @@ H &\rightarrow H-e\phi\\
 \end{align}
 Bewegungsgleichung:
 \begin{align}
-\frac{d}{dt}\frac{\partial L}{\partial \vec{v}}-\frac{\partial L}{\partial
+\frac{\mathrm{d}}{\mathrm{d}t}\frac{\partial L}{\partial \vec{v}}-\frac{\partial L}{\partial
 \vec{x}}&=0\\
 \text{berechne }\ \ \ \ \  \frac{\partial
 L}{\partial\vec{x}}&=-e\vec{\nabla}\phi+ \frac{e}{c}\vec{\nabla}(\vec{A}\vec{v})\\
 &=-e\vec{\nabla}\phi+\frac{e}{c}\left(
 (\vec{v}\vec{\nabla})\vec{A}+\vec{v}\times(\vec{\nabla}\times\vec{A}) \right)\\
-\rightarrow \frac{d}{dt}(\vec{p}+\frac{e}{c}\vec{A})&=-e\vec{\nabla}\phi
+\rightarrow \frac{\mathrm{d}}{\mathrm{d}t}(\vec{p}+\frac{e}{c}\vec{A})&=-e\vec{\nabla}\phi
 \frac{e}{c}\left( (\vec{v}\vec{\nabla})\vec{A}+\vec{v}\times(\vec{\nabla}\times\vec{A})
 \right)\\
-\frac{d}{dt}\vec{A}&=\frac{\partial}{\partial t}\vec{A}+
-\frac{\partial\vec{A}}{\partial x^i}\frac{dx^i}{dt}\\
+\frac{\mathrm{d}}{\mathrm{d}t}\vec{A}&=\frac{\partial}{\partial t}\vec{A}+
+\frac{\partial\vec{A}}{\partial x^i}\frac{\mathrm{d}x^i}{\mathrm{d}t}\\
 &=\frac{\partial}{\partial t}\vec{A}+(\nabla*\nabla)\vec{A}\\
 \Rightarrow
-\frac{d}{dt}\vec{p}&=-e\vec{\nabla}\phi+\frac{e}{c}\vec{v}
+\frac{\mathrm{d}}{\mathrm{d}t}\vec{p}&=-e\vec{\nabla}\phi+\frac{e}{c}\vec{v}
 \times(\vec{\nabla}\times\vec{A}) -\frac{e}{c}\frac{\partial}{\partial t}\vec{A}\\
 \text{Def.: }\vec{E}&=-\nabla\phi-\frac{1}{c}\frac{\partial}{\partial
 t}\vec{A}\\
 \vec{B}=\nabla \times \vec{A}
-\Rightarrow \frac{d\vec{p}}{dt}&=e\vec{E}+\frac{e}{c}\vec{v}\times\vec{B} 
+\Rightarrow \frac{\mathrm{d}\vec{p}}{\mathrm{d}t}&=e\vec{E}+\frac{e}{c}\vec{v}\times\vec{B} 
 \text{ Lorentz Kraft}
 \end{align}
 
@@ -752,29 +756,29 @@ aus $\delta S=0$ bez. Variation $x^\mu(s)\rightarrow x^\mu(s)+\delta x^\mu(s)$
 Variation $\delta \mathrm{d}x^\mu$ im Integral\\ 
 a):
 \begin{align}
-&-\frac{e}{c}\int^b_a A_\mu(x(s))\frac{\mathrm{d}\delta x^\mu}{ds}ds\\
-=&\frac{e}{c}\int^b_a \frac{d}{ds}A_\mu(x(s))\delta x^\mu(s) ds +
+&-\frac{e}{c}\int^b_a A_\mu(x(s))\frac{\mathrm{d}\delta x^\mu}{\mathrm{d}s}\mathrm{d}s\\
+=&\frac{e}{c}\int^b_a \frac{\mathrm{d}}{\mathrm{d}s}A_\mu(x(s))\delta x^\mu(s) \mathrm{d}s +
 \text{Randterme}\\
-=&\frac{e}{c}\int^b_a \partial_\nu A_\mu \frac{dx^\nu}{ds}\delta x^\mu ds\\
-=&\frac{e}{c}\int^b_a \partial_\nu A_\mu u^\nu\delta x^\mu ds
+=&\frac{e}{c}\int^b_a \partial_\nu A_\mu \frac{\mathrm{d}x^\nu}{\mathrm{d}s}\delta x^\mu \mathrm{d}s\\
+=&\frac{e}{c}\int^b_a \partial_\nu A_\mu u^\nu\delta x^\mu \mathrm{d}s
 \end{align}
 b):
 \begin{align}
--\frac{e}{c}\int^b_a \partial_\nu A_\mu u^\mu\delta x^\nu ds
+-\frac{e}{c}\int^b_a \partial_\nu A_\mu u^\mu\delta x^\nu \mathrm{d}s
 \end{align}
 
 Daraus folgt:
 \begin{align}
-\delta S &= \int_a^b ds \delta x^\mu \left( mc\frac{du_\mu}{ds} +
+\delta S &= \int_a^b \mathrm{d}s \delta x^\mu \left( mc\frac{\mathrm{d}u_\mu}{\mathrm{d}s} +
 \frac{e}{c} \left[ \partial_\nu A_\mu u^\nu - \partial_\mu A_\nu u^\nu
 \right]\right)\\
-&=\int_a^b ds \delta x^\mu \left( mc\frac{du_\mu}{ds} -
+&=\int_a^b \mathrm{d}s \delta x^\mu \left( mc\frac{\mathrm{d}u_\mu}{\mathrm{d}s} -
 \frac{e}{c} \left[ \partial_\mu A_\nu - \partial_\nu A_\mu \right] u^\nu
 \right)
 \end{align}
 Kovariante Form der Bewegungsgleichung:
 \begin{align}
-mc\frac{du_\mu}{s}=\frac{e}{c}F_{\mu\nu}u^\nu
+mc\frac{\mathrm{d}u_\mu}{s}=\frac{e}{c}F_{\mu\nu}u^\nu
 \end{align}
 Mit Felstärketensor(antisym.)
 \begin{align}
@@ -803,26 +807,26 @@ Explizit heißt dies also:
 \end{align}
 Räumliche Komponenten der Bewegungsgleichung
 \begin{align}
-p_\mu&=mcu_\mu , &ds=cdt\sqrt{1-\beta^2}\\
+p_\mu&=mcu_\mu , &\mathrm{d}s=c\mathrm{d}t\sqrt{1-\beta^2}\\
 u^0&=\frac{1}{\sqrt{1-\beta^2}} , &u^k=\frac{v^k}{c\sqrt{1-\beta^2}}
 \end{align}
 \begin{align}
--\frac{1}{c\sqrt{1-\beta^2}}\frac{dp^i}{dt}&=\frac{e}{c}\left(-E^i
+-\frac{1}{c\sqrt{1-\beta^2}}\frac{\mathrm{d}p^i}{\mathrm{d}t}&=\frac{e}{c}\left(-E^i
 \frac{1}{\sqrt{1-\beta^2}}-\epsilon_{ijk}B^l\frac{v^k}{\sqrt{1-\beta^2}}\right)\\
-\frac{d\vec{p}}{dt}&=e\left(-\vec{E}+\frac{1}{c}\vec{v}c\vec{B}\right)
+\frac{\mathrm{d}\vec{p}}{\mathrm{d}t}&=e\left(-\vec{E}+\frac{1}{c}\vec{v}c\vec{B}\right)
 \end{align}
 Zeitliche Komponenten:
 \begin{align}
-mc\frac{du_0}{ds}=\frac{e}{c}F_{0i}u^i\\
-\frac{d}{dt}\left(\frac{mc^2}{\sqrt{1-\beta^2}}\right)=e\vec{E}\vec{v}\\
-\frac{d}{dt}\left( \xi \right)=e\vec{E}\vec{v}
+mc\frac{\mathrm{d}u_0}{\mathrm{d}s}=\frac{e}{c}F_{0i}u^i\\
+\frac{\mathrm{d}}{\mathrm{d}t}\left(\frac{mc^2}{\sqrt{1-\beta^2}}\right)=e\vec{E}\vec{v}\\
+\frac{\mathrm{d}}{\mathrm{d}t}\left( \xi \right)=e\vec{E}\vec{v}
 \end{align}
 Mit der Gesatenergie $\xi$
 \subparagraph{Lorentzkraft}
-Lorentzkraft + Gleichung für $\frac{d\xi}{dt}$ sind nicht unabhängig und damit 
+Lorentzkraft + Gleichung für $\frac{\mathrm{d}\xi}{\mathrm{d}t}$ sind nicht unabhängig und damit 
 aus $u^2=1$ folgen
 \begin{align}
-\frac{d}{ds}u^2=0, & \frac{d}{ds}u_\mu u^\mu=2u_\mu\frac{du^\mu}{ds}=0
+\frac{\mathrm{d}}{\mathrm{d}s}u^2=0, & \frac{\mathrm{d}}{\mathrm{d}s}u_\mu u^\mu=2u_\mu\frac{\mathrm{d}u^\mu}{\mathrm{d}s}=0
 \end{align}
 \subsection{Lorentztransformationen der Felder}
 \subsubsection{Vektorpotential}
@@ -855,7 +859,7 @@ B'_3=\frac{B_3-\beta E_2}{\sqrt{1-\beta^2}}
 Bew.Gl
 Ladung e (Kopplungskonstante)\\
 elektromagnetsiches Feld $A^\mu$\\
-kovariant: $mc\frac{du^\mu}{ds}=\frac{e}{c} F^{\mu\nu} u^\nu$ (Lorentzkraft)\\
+kovariant: $mc\frac{\mathrm{d}u^\mu}{\mathrm{d}s}=\frac{e}{c} F^{\mu\nu} u^\nu$ (Lorentzkraft)\\
 Feldstärketensor $F^{\mu\nu}=\partial^\mu A^\nu-\partial^\nu A^\mu \\
 \rightarrow (\vec{E},\vec{B})$\\
 Eichinvarianz: $A^\mu\rightarrow A^\mu-\partial^\mu\chi$\\
@@ -908,7 +912,7 @@ In integraler Form:
   F}d\vec{x}\vec{E}=\frac{1}{c}\int_F d\sigma \vec{\ddot{B}}\vec{n}
   \end{equation}
   \item aus $\vec{\nabla}\vec{B}=0$ und dem Satz von Gauß folgt \begin{equation}
-  \int_V d^3x\vec{\nabla}\vec{B}=\oint_{\partial V}d\vec{f}\vec{B}=0
+  \int_V \mathrm{d}^3x\vec{\nabla}\vec{B}=\oint_{\partial V}\mathrm{d}\vec{f}\vec{B}=0
   \end{equation}
   Was im endeffekt aussagt, dass es keine magnetischen Monopole gibt.
 \end{itemize}
@@ -942,13 +946,13 @@ oder mit Hilfe von $\tilde{F}_{\mu\nu}$\\
   Teichenchen $\rightarrow \infty$
   \item Gaußsche Einheiten
   \item Integrale Form: \begin{equation}
-  \int_V\vec{\nabla}\vec{E}d^3x=\oint_{\partial V}\vec{E}d\vec{f}=^!
-  4\pi\int_Vd^3x\rho =4\pi Q
+  \int_V\vec{\nabla}\vec{E}\mathrm{d}^3x=\oint_{\partial V}\vec{E}\mathrm{d}\vec{f}=^!
+  4\pi\int_V\mathrm{d}^3x\rho =4\pi Q
   \end{equation} 
-  Gesamtladung in $V$: $Q=\int_V d^3x \rho$
+  Gesamtladung in $V$: $Q=\int_V \mathrm{d}^3x \rho$
   \begin{equation}
-  \int_F d\vec{f}\vec{\nabla}\times\vec{B}=\oint_{\partial F}d\vec{x}\vec{B}=^!
-  \int_Fd\vec{f}(\frac{1}{c}\vec{\ddot{E}}+\frac{4\pi}{c}\vec{j})
+  \int_F \mathrm{d}\vec{f}\vec{\nabla}\times\vec{B}=\oint_{\partial F}\mathrm{d}\vec{x}\vec{B}=^!
+  \int_F\mathrm{d}\vec{f}(\frac{1}{c}\vec{\ddot{E}}+\frac{4\pi}{c}\vec{j})
   \end{equation}
   Was als Biot-Savait-Gesetz bekannt ist mit dem Verschiebungsstrom
   $\frac{1}{c}\vec{\ddot{E}}$ \\
@@ -962,31 +966,31 @@ $a=1,\ldots,N(\rightarrow \infty)$ am Ort $\vec{x}_a$
 \rho(\vec{x},t)=\sum_{a=1}^N e_a\delta^3(\vec{x}-\vec{x_a}(t))
 \end{equation}
 Annahme: $\rho(\vec{x},t)$ gegeben, glatt und diffenrenzierbar\\
-Volumenelement $d^3x$ enthält dann die Ladung $de=\rho d^3x$
-für bewegte Ladung betrachte dann: Verschiebung um $dx^mu$
+Volumenelement $\mathrm{d}^3x$ enthält dann die Ladung $\mathrm{d}e=\rho \mathrm{d}^3x$
+für bewegte Ladung betrachte dann: Verschiebung um $\mathrm{d}x^mu$
 \begin{align}
-\rightarrow de dx^\mu=\rho d^3x dx^\mu=\rho
-\underbrace{d^3xdt}{d\Omega}\frac{dx^\mu}{dt}
-=d\Omega \rho \frac{d x^\mu}{dt}
+\rightarrow \mathrm{d}e \mathrm{d}x^\mu=\rho \mathrm{d}^3x \mathrm{d}x^\mu=\rho
+\underbrace{\mathrm{d}^3x\mathrm{d}t}{\mathrm{d}\Omega}\frac{\mathrm{d}x^\mu}{\mathrm{d}t}
+=\mathrm{d}\Omega \rho \frac{\mathrm{d} x^\mu}{\mathrm{d}t}
 \end{align}
 Transformationsverhalten
 \begin{itemize}
   \item linke Seite:
 	\begin{itemize}
-  		\item $de$ ist Lorentzskalar
-  		\item $dx^\mu$ ist 4-Vektor 
+  		\item $\mathrm{d}e$ ist Lorentzskalar
+  		\item $\mathrm{d}x^\mu$ ist 4-Vektor 
 	\end{itemize}
-  \item rechte Seite: $d\Omega$ ist Lorentzinvariante
+  \item rechte Seite: $\mathrm{d}\Omega$ ist Lorentzinvariante
 \end{itemize}
 \begin{equation}
-\Rightarrow j^\mu=\rho\frac{dx^\mu}{dt} \text{ist 4-Vektor}
+\Rightarrow j^\mu=\rho\frac{\mathrm{d}x^\mu}{\mathrm{d}t} \text{ist 4-Vektor}
 \end{equation}
 
 Komponentenweise:
 \begin{align}
-j^0=\rho \frac{dx^0}{dt}=c\rho\\
-\vec{j}=\rho\frac{d\vec{x}}{dt}=\rho\vec{v}=\vec{j}\\
-\left( Q=\int_V d^3x\rho=\frac{1}{c}\int_V d^3xj^0(\vec{x},t) \right)
+j^0=\rho \frac{\mathrm{d}x^0}{\mathrm{d}t}=c\rho\\
+\vec{j}=\rho\frac{\mathrm{d}\vec{x}}{\mathrm{d}t}=\rho\vec{v}=\vec{j}\\
+\left( Q=\int_V \mathrm{d}^3x\rho=\frac{1}{c}\int_V \mathrm{d}^3xj^0(\vec{x},t) \right)
 \end{align}
 
 schreibe Maxwellgleichung mit Hilfe von $F^{\mu\nu}$ und $j^\mu$
@@ -1029,24 +1033,24 @@ Wirkungsprinziep $\Rightarrow \partial_\mu F^{\mu \nu}=\frac{4\pi}{c}j^\nu$\\
 
 Bisher gingen wir davon aus, dass $S_{WW}$ für ein Teilchen
 \begin{align}
-S_{WW}=-\frac{1}{c}\sum_a&e_a\int dx_a^\mu A_\mu(x_a)\\
+S_{WW}=-\frac{1}{c}\sum_a&e_a\int \mathrm{d}x_a^\mu A_\mu(x_a)\\
 &\downarrow beliebige Ladungsverteilung\\
-S_{WW}=-\frac{1}{c}\int&d^3x\rho(x)\int dt\frac{dx^\mu}{dt}A_\mu(x)\\
-=-\frac{1}{c}\int&dtd^3x\underbrace{\rho(x)\frac{dx^\mu}{dt}}_{j^\mu(x)}A_\mu(x)\\
-=-\frac{1}{c^2}\int&d\Omega \underbrace{j^\mu A_\mu}_{\text{Lagrangedichte}}\\
+S_{WW}=-\frac{1}{c}\int&\mathrm{d}^3x\rho(x)\int \mathrm{d}t\frac{\mathrm{d}x^\mu}{\mathrm{d}t}A_\mu(x)\\
+=-\frac{1}{c}\int&\mathrm{d}t\mathrm{d}^3x\underbrace{\rho(x)\frac{\mathrm{d}x^\mu}{\mathrm{d}t}}_{j^\mu(x)}A_\mu(x)\\
+=-\frac{1}{c^2}\int&\mathrm{d}\Omega \underbrace{j^\mu A_\mu}_{\text{Lagrangedichte}}\\
 \end{align}
 \paragraph{Eichinvarianz}
 Eichtransormation: $A_\mu\rightarrow A_\mu-\partial_\mu\chi$ mit Eichfunktion
 $\chi$\\
 Zusatzterm in $S_{WW}$\\
 \begin{align}
-\Delta S_{WW}&=-\frac{1}{c^2}\int d\Omega j^\mu \partial_\mu\chi
+\Delta S_{WW}&=-\frac{1}{c^2}\int \mathrm{d}\Omega j^\mu \partial_\mu\chi
 \text{   partielle Integration}\\
-&=\frac{1}{c^2}\underbrace{\int d\Omega \partial_\mu(j^\mu\chi)}_{\text{nach
-Gauß} \oint dS_\mu(j^\mu\chi)}-\frac{1}{c^2}\int d\Omega
+&=\frac{1}{c^2}\underbrace{\int \mathrm{d}\Omega \partial_\mu(j^\mu\chi)}_{\text{nach
+Gauß} \oint \mathrm{d}S_\mu(j^\mu\chi)}-\frac{1}{c^2}\int \mathrm{d}\Omega
 \chi\underbrace{\partial_\mu j^\mu}_{=0 \text{ wegen der Forderung nach
 Eichinvarianz}}\\
-\oint dS_\mu(j^\mu\chi)&=0 \text{ falls man die Oberfläche ins unendliche legt}
+\oint \mathrm{d}S_\mu(j^\mu\chi)&=0 \text{ falls man die Oberfläche ins unendliche legt}
 \end{align}
 \paragraph{Stromerhaltung}
 Forderung: $\partial_\mu j^\mu=0$ "Stromerhaltung"
@@ -1057,9 +1061,9 @@ Forderung: $\partial_\mu j^\mu=0$ "Stromerhaltung"
 \end{align}
 In integraler Form ergibt sich damit:
 \begin{align}
-\int_V d^3x\ddot{\rho}(x)=-\int_V d^3x \vec{\nabla}\vec{j} = \oint_{\partial
-V}d\vec{f}\vec{j}\\
-\text{Gesamtladung im Volumen} \ddot{Q}_V=-\oint_{\partial V}d\vec{f}\vec{j}
+\int_V \mathrm{d}^3x\ddot{\rho}(x)=-\int_V \mathrm{d}^3x \vec{\nabla}\vec{j} = \oint_{\partial
+V}\mathrm{d}\vec{f}\vec{j}\\
+\text{Gesamtladung im Volumen} \ddot{Q}_V=-\oint_{\partial V}\mathrm{d}\vec{f}\vec{j}
 \text{Ladungserhaltung}
 \end{align}
 
@@ -1077,7 +1081,7 @@ Konstruktionsprinziep:
   \item Eichinvarianz
 \end{itemize}
 Integrand enthält $A_\mu$,$F_{\mu\nu}$\\
-Ansatz: $S_F=f\int d\Omega F_{\mu\nu}F^{\mu\nu}$\\
+Ansatz: $S_F=f\int \mathrm{d}\Omega F_{\mu\nu}F^{\mu\nu}$\\
 \begin{itemize}
   \item Vorzeichen?
 	\begin{align}
@@ -1090,10 +1094,10 @@ Ansatz: $S_F=f\int d\Omega F_{\mu\nu}F^{\mu\nu}$\\
 \end{itemize}
 $\rightarrow$ Wirkung:
 \begin{align}
-S_F&=-\frac{1}{16\pi c}\int d\Omega F_{\mu\nu}F^{\mu\nu}\\
-&=\int dt\underbrace{\int d^3x \frac{E^2-B^2}{8\pi}}_{Lagrangedichte}
+S_F&=-\frac{1}{16\pi c}\int \mathrm{d}\Omega F_{\mu\nu}F^{\mu\nu}\\
+&=\int \mathrm{d}t\underbrace{\int \mathrm{d}^3x \frac{E^2-B^2}{8\pi}}_{Lagrangedichte}
 \end{align}
-Weiter mit Ansatz: $S_F=-\frac{1}{16\pi c}\int d\Omega F_{\mu\nu}F^{\mu\nu}$
+Weiter mit Ansatz: $S_F=-\frac{1}{16\pi c}\int \mathrm{d}\Omega F_{\mu\nu}F^{\mu\nu}$
 \begin{itemize}
   \item Keine Ableitungen von $F$ in der Formel enthalten, da F bereits
   $\partial_mu A_nu$ enthält, worin auch Zeitableitungen enthaltne sind
@@ -1113,25 +1117,25 @@ Weiter mit Ansatz: $S_F=-\frac{1}{16\pi c}\int d\Omega F_{\mu\nu}F^{\mu\nu}$
 Variation $A_\mu \rightarrow A_\mu+\delta A_\mu$
 \begin{align}
 \rightarrow \delta S&=\delta S_{WW}+\delta S_F\\
-&=-\frac{1}{c}\int d\Omega \left[ \frac{1}{c} j^\mu \delta\!A_\mu +
+&=-\frac{1}{c}\int \mathrm{d}\Omega \left[ \frac{1}{c} j^\mu \delta\!A_\mu +
 \frac{1}{16\pi} \underbrace{\delta(F_{\mu\nu}F^{\mu\nu})}_{2(\delta F_{\mu\nu})
 F^{\mu\nu}} \right]\\
-&=-\frac{1}{c}\int d\Omega \left[ \frac{1}{c} j^\mu \delta\!A_\mu +
+&=-\frac{1}{c}\int \mathrm{d}\Omega \left[ \frac{1}{c} j^\mu \delta\!A_\mu +
 \frac{1}{8\pi} F^{\mu\nu}\left( \partial_\mu\delta\!A_\nu-
 \partial_\nu\delta\!A_\mu \right)\right]\\
 F^{\mu\nu} \partial_\mu\delta\!A_\nu&=F^{\nu\mu} \partial_\nu\delta\!A_\mu
 \text{ 1: Umbenenennen der Indizes}\\
 F^{\nu\mu} \partial_\nu\delta\!A_\mu&=-F^{\mu\nu} \partial_\nu\delta\!A_\mu
 \text{ 2: Vertauschen der Indizes von }F\\
-\Rightarrow \delta S &= -\frac{1}{c}\int d\Omega \left[ \frac{1}{c} j^\mu
+\Rightarrow \delta S &= -\frac{1}{c}\int \mathrm{d}\Omega \left[ \frac{1}{c} j^\mu
 \delta\!A_\mu - \frac{1}{4\pi} F^{\mu\nu} \partial_\nu\delta\!A_\mu \right]\\
-&= -\frac{1}{c}\int d\Omega \left[ \frac{1}{c} j^\mu
+&= -\frac{1}{c}\int \mathrm{d}\Omega \left[ \frac{1}{c} j^\mu
 \delta\!A_\mu - \frac{1}{4\pi} \partial_\nu F^{\mu\nu} \delta\!A_\mu \right] +0
-\text{Die Randterme im Unendlichen sind wieder 0} \\
-&= -\frac{1}{c}\int d\Omega \underline{\left[ \frac{1}{c} j^\mu - \frac{1}{4\pi}
+\text{ Die Randterme im Unendlichen sind wieder 0} \\
+&= -\frac{1}{c}\int \mathrm{d}\Omega \underline{\left[ \frac{1}{c} j^\mu - \frac{1}{4\pi}
 \partial_\nu F^{\mu\nu}\right]}_{!=0 \text{ aus } \delta\!S=0}
 \underbrace{\underline{\delta\!A_\mu}}_{\text{beliebig}}\\
-\Rightarrow \partial_\mu F^{\mu\nu}=\frac{4\pi}{c}j^\nu \text{ Wieder die
+\Rightarrow \partial_\mu F^{\mu\nu}&=\frac{4\pi}{c}j^\nu \text{ Wieder die
 Maxwellgleichungen}
 \end{align}
 Die Kontinuitätsgleichung ergibt sich aus $\partial_\nu\partial_\mu
@@ -1160,21 +1164,21 @@ Poynting-Vektor $\vec{S}=\frac{c}{4\pi}\vec{E}\times\vec{B}$
 \end{align}
 In integraler Form ergibt sich dann:
 \begin{align}
-\int_V d^3x \vec{\nabla}\vec{S}&=\oint_{\partial V}d\!\vec{f}\vec{S}\\
-\underbrace{\int_V d^3x \vec{E}\vec{j}}_{\text{Zeitableitung der Gesamtengerie
+\int_V \mathrm{d}^3x \vec{\nabla}\vec{S}&=\oint_{\partial V}\mathrm{d}\!\vec{f}\vec{S}\\
+\underbrace{\int_V \mathrm{d}^3x \vec{E}\vec{j}}_{\text{Zeitableitung der Gesamtengerie
 der Ladung}}&=\int_V
-\underbrace{d^3x\rho}_{e}\vec{v}\vec{E}=\frac{d}{dt}\epsilon\\
-\underbrace{\frac{\partial}{\partial t}\left(\int_V d^3x
+\underbrace{\mathrm{d}^3x\rho}_{e}\vec{v}\vec{E}=\frac{\mathrm{d}}{\mathrm{d}t}\epsilon\\
+\underbrace{\frac{\partial}{\partial t}\left(\int_V \mathrm{d}^3x
 \frac{\vec{E}^2+\vec{B}^2}{8\pi} +\epsilon
 \right)}_{\frac{\partial}{\partial t}\left( \ldots \right)=0 \Rightarrow
 \text{Erhaltungssatz}} =\underbrace{-\oint_{\partial
-V}d\vec{f}\vec{S}}_{\text{für } V\rightarrow\infty \Rightarrow =0}
+V}\mathrm{d}\vec{f}\vec{S}}_{\text{für } V\rightarrow\infty \Rightarrow =0}
 \end{align}
 $\Rightarrow$ Def.: Energiedichte des elektromagnetischen Feldes
 \begin{equation}
 W=\frac{1}{8\pi}(\vec{E}^2+\vec{B}^2)
 \end{equation}
-Für endliche Volumen gilt: Energiefluß: $\oint d\vec{f}\vec{S}$
+Für endliche Volumen gilt: Energiefluß: $\oint \mathrm{d}\vec{f}\vec{S}$
 \begin{equation}
 \vec{S}=\frac{c}{4\pi}\vec{E}\times\vec{B}
 \end{equation}
@@ -1183,15 +1187,15 @@ Für endliche Volumen gilt: Energiefluß: $\oint d\vec{f}\vec{S}$
 \subsubsection{Allgemeine Feltheorie (Wdh.)}
 Wirkung des elektromagnetischen Feldes 
 \begin{align}
-S=\frac{1}{c}\int d^4x\left(\underbrace{-\frac{1}{16\pi}F_{\mu\nu}F^{\mu\nu}-
+S=\frac{1}{c}\int \mathrm{d}^4x\left(\underbrace{-\frac{1}{16\pi}F_{\mu\nu}F^{\mu\nu}-
 \frac{1}{c}j^\mu A_\mu}_{\text{Lagrangedichte}} \right) +\text{Materie}\\
 \delta S=0 \text{ unter Variationen } A_\mu \rightarrow A_\mu+\delta A_\mu\\
 \Rightarrow \partial_\mu F^{\mu\nu}=\frac{4\pi}{c}j^\nu
 \end{align}
 Energie-Bilanz:
 \begin{align}
-\frac{\partial}{\partial t}\left(\int_V d^3x
-\frac{E^2+B^2}{8\pi}+\epsilon_V\right)=-\oint_{\partial V} d\vec{f}\vec{S}
+\frac{\partial}{\partial t}\left(\int_V \mathrm{d}^3x
+\frac{E^2+B^2}{8\pi}+\epsilon_V\right)=-\oint_{\partial V} \mathrm{d}\vec{f}\vec{S}
 \end{align}
 Eneriedichte des Feldes: $W=\frac{E^2+B^2}{8\pi}$\\
 Energiestromdichte (Poynting-Vektor):
@@ -1210,14 +1214,14 @@ verallgemienerte Geschwindigkeiten $\dot{q}_i(t)$&
 $\partial^\mu A^\nu(x)$)\\
 Lagrangefunktion $L(q_i,\dot{q}_i)$ & Lagrangedichte $\Lambda(q,\partial_\mu
 q)$\\
-Wirkung $S[q_i(t)]$ als Funktional & Wirkung $S=\int dt d^3x
+Wirkung $S[q_i(t)]$ als Funktional & Wirkung $S=\int \mathrm{d}t \mathrm{d}^3x
 \Lambda(q,\partial_\mu q)=S[q(x^\mu)]$\\
 Bewegungsgleichung aus $\delta S=0$&Bewegungsgleichung aus $\delta S=0$\\
 \end{tabular}
 
 Bewegungsgleichungen aus dem Variationsprinziep
 \begin{align}
-\delta S=\frac{1}{c}\int d\Omega \left( \frac{\partial
+\delta S=\frac{1}{c}\int \mathrm{d}\Omega \left( \frac{\partial
 \Lambda}{\partial\!q}\delta\!q +\underbrace{\frac{\partial \Lambda}{\partial\!
 (\partial_\mu\! q)} \partial_\mu\! \delta\!q}_{\text{Lösung: part. Int.}}
 \right)
@@ -1253,22 +1257,22 @@ q)}\partial_\nu(\partial_\mu q)\\
 \Lambda}{\partial(\partial_\nu q)}\partial_\mu q - g_\mu{}^\nu \Lambda
 \right)}_{\partial_\nu T_\mu{}^\nu=0}=0\\
 \partial_\mu j^\mu=0 \rightarrow \dot{Q}=0\\
-0=\int_V d\Omega \partial_\nu T_\mu{}^{\nu}=\oint_{\partial V} dS_\nu
+0=\int_V \mathrm{d}\Omega \partial_\nu T_\mu{}^{\nu}=\oint_{\partial V} \mathrm{d}S_\nu
 T_\mu{}^\nu
 % XXXX Einfügen Grafik X1
 \end{align}
 bei fester Zeit $t_1$ und $t_2$ gilt 
 \begin{align}
-dS^\nu \rightarrow dS^0=dx^1dx^2dx^3
+\mathrm{d}S^\nu \rightarrow \mathrm{d}S^0=\mathrm{d}x^1\mathrm{d}x^2\mathrm{d}x^3
 \end{align}
 $t_1$, $t_2$ beliebig
 \begin{align}
-0=\int d^3x T_\mu{}^0|_{x^0=ct_2}-\int d^3x T_\mu{}^0|_{x^0=ct_1}
-\Rightarrow \text{Erhaltungsgröße } \int d^3x T_\mu{}^0|_{x^0=ct}
+0=\int \mathrm{d}^3x T_\mu{}^0|_{x^0=ct_2}-\int \mathrm{d}^3x T_\mu{}^0|_{x^0=ct_1}
+\Rightarrow \text{Erhaltungsgröße } \int \mathrm{d}^3x T_\mu{}^0|_{x^0=ct}
 \end{align}
 Diese Erhaltungsgröße folgen aus der Translationsinvarianz
 \begin{align}
-\int d^3x T_\mu{}^0=\text{const.}* P_\mu
+\int \mathrm{d}^3x T_\mu{}^0=\text{const.}* P_\mu
 \end{align}
 zur Normierung
 \begin{align}
@@ -1276,8 +1280,8 @@ T_{00}=\frac{\partial \Lambda}{\partial(\partial_0 q)}\partial_0 q
 -\Lambda=\frac{\partial \Lambda}{\partial \dot{q}}\dot{q}-\Lambda\\
 H=\underbrace{\frac{\partial L}{\partial v}}_{p} v-L\\
 \text{Wirkung}=\left[ \text{Energie}*\text{Zeit}\right]\\
-=\frac{1}{c}\int dx^0\underbrace{\int d^3x\Lambda}_{E}\\
-\rightarrow P^\mu=\frac{1}{c}\int dS_\nu T^{\mu\nu}
+=\frac{1}{c}\int \mathrm{d}x^0\underbrace{\int \mathrm{d}^3x\Lambda}_{E}\\
+\rightarrow P^\mu=\frac{1}{c}\int \mathrm{d}S_\nu T^{\mu\nu}
 \end{align}
 Beschreibt dann den 4-Impuls des Feldes
 \paragraph{Bemerkungen}
@@ -1286,11 +1290,11 @@ Beschreibt dann den 4-Impuls des Feldes
   $\Psi^{\mu\nu\rho}=-\Psi^{\mu\rho\nu}$\\ $\rightarrow
   \partial_\mu\partial_\nu\Psi^{\mu\nu\rho}=0$\\$\rightarrow
   \partial_\nu(T^{\mu\nu}+\partial_\rho \Psi^{\mu\nu\rho} )=0$
-  \item $P^\mu=\frac{1}{c}\int dS_\nu \left( T^{\mu\nu}+\partial_\rho
-  \Psi^{\mu\nu\rho} \right)\rightarrow \oint df_{\nu\rho} \Psi^{\mu\nu\rho}=0 $
+  \item $P^\mu=\frac{1}{c}\int \mathrm{d}S_\nu \left( T^{\mu\nu}+\partial_\rho
+  \Psi^{\mu\nu\rho} \right)\rightarrow \oint \mathrm{d}f_{\nu\rho} \Psi^{\mu\nu\rho}=0 $
   \item Zusatzforderung: $T^{\mu\nu}$ soll symmetrisch sein aus: Drehimpuls und
   Impuls erfüllen die gewohnten Beziehung: $M^{\mu\nu}=\int\left( x^\mu
-  dP^\nu-x^\nu dP^\mu \right)$\\$=\frac{1}{c}\int dS_\rho\left( x^\mu
+  \mathrm{d}P^\nu-x^\nu \mathrm{d}P^\mu \right)$\\$=\frac{1}{c}\int \mathrm{d}S_\rho\left( x^\mu
   T^{\nu\rho}-x^\nu T^{\mu\rho} \right)$\\ Die Drehimpulserhaltung folgt dann
   aus der Invarianz unter Drehungen\\ $\partial_\rho\left( x^\mu
   T^{\nu\rho}-x^\nu T^{\mu\rho} \right)=0$
@@ -1309,7 +1313,7 @@ $T^{\mu\nu}$ heißt Energie-Impuls-Tensor
 \begin{align}
 q\rightarrow \text{ elektromagn } A_\mu(x)
 \dot{q} \rightarrow \partial_\mu A_\nu(x)
-\text{Wirkung} S=\frac{1}{c}\int d^4x \Lambda(A_\mu(x),\partial_\mu
+\text{Wirkung} S=\frac{1}{c}\int \mathrm{d}^4x \Lambda(A_\mu(x),\partial_\mu
 A_\nu(x))
 \end{align}
 \paragraph{Lagrangedichte Wdh.}
@@ -1327,13 +1331,13 @@ Translationsinvarianz $\Rightarrow$ Erhaltungssatz
 \end{align}
 4-Impulserhaltung
 \begin{align}
-P^\mu=\frac{1}{c}\int_{\partial V} dS_\nu T^{\mu\nu} 
+P^\mu=\frac{1}{c}\int_{\partial V} \mathrm{d}S_\nu T^{\mu\nu} 
 \end{align}
-Wobei $\partial V$ eine Raumartige Hyperfläche darstellt mit $dS_\nu$ dem
+Wobei $\partial V$ eine Raumartige Hyperfläche darstellt mit $\mathrm{d}S_\nu$ dem
 Normalenvektor auf dieser Fläche, was dazu führt, das dieser Vektor nur eine
 nicht verschwindende Komponenten in zeitlicher Richtung besitzt.
 \begin{align}
-\Rightarrow P^\mu=\frac{1}{c}\int d^3x T^{\mu0}
+\Rightarrow P^\mu=\frac{1}{c}\int \mathrm{d}^3x T^{\mu0}
 \end{align}
 
 Zunächst 
@@ -1351,13 +1355,13 @@ Interpretation der Komponenten von $T^{\mu\nu}$
   \item aus $\partial_\rho T^{\mu\rho} \rightarrow
   \frac{1}{c}\frac{\partial}{\partial t} T^{\mu 0}+\frac{\partial}{\partial
   x^i} T^{\mu i}=0$ \\ Integralform über den Satz von Gauß für $\mu=0$:\\
-  $\frac{1}{c}\int_V d^3x \frac{\partial}{\partial t} T^{0 0}=-\int_{\partial
-  V} df_i T^{0i}$ \\ $\rightarrow$ zeitliche Änderung der Energie$=$Energie die
+  $\frac{1}{c}\int_V \mathrm{d}^3x \frac{\partial}{\partial t} T^{0 0}=-\int_{\partial
+  V} \mathrm{d}f_i T^{0i}$ \\ $\rightarrow$ zeitliche Änderung der Energie$=$Energie die
   durch die Oberfläche wegfließt\\ $cT^{0i}=S^i$Energiestromdichte mit dem
   (Poynting-Vektor $S^i$)
   \item für $\mu=i$ genauso \\ $\frac{1}{c}\frac{\partial}{\partial t}
   T^{j0}=-\frac{\partial}{\partial x^i} T^{ji}$\\ $\frac{\partial}{\partial
-  t}\frac{1}{c}\int_Vd^3x T^{j0}=-\oint_{\partial V}df_i T^{ji}$\\$\rightarrow$
+  t}\frac{1}{c}\int_V\mathrm{d}^3x T^{j0}=-\oint_{\partial V}\mathrm{d}f_i T^{ji}$\\$\rightarrow$
   $T^{ji}$ ist Impulsstromdichte\\zeitliche Änderung des Impulses$=$Impulsstrom
   durch Oberfläche \\ $T^{ji}$ heißt auch Maxwellscher Spannungstensor
   \begin{align}
@@ -1397,17 +1401,17 @@ Interpretation der Komponenten von $T^{\mu\nu}$
   	mit den Bahnkurven der Teilchen $\vec{x}_a(t)$\\
   \item Geschwindigkeitsstromdichte 
   	$u^\mu(x)=\sum_a u^\mu_a \delta^{(3)}(\vec{x}-\vec{x}_a)$
-  \item Massenstromdichte: $\rightarrow \frac{1}{c}\mu\frac{dx^\rho}{dt}$(analog zur
+  \item Massenstromdichte: $\rightarrow \frac{1}{c}\mu\frac{\mathrm{d}x^\rho}{\mathrm{d}t}$(analog zur
   	Ladungsstromdichte)\\
   \item Impulsdichte $T^{\rho0}=c^2\mu u^\rho$\\ \begin{align}
-  	\rightarrow T^{\rho\sigma}=\mu c u^\rho u^\sigma \frac{dS}{dt}
+  	\rightarrow T^{\rho\sigma}=\mu c u^\rho u^\sigma \frac{\mathrm{d}S}{\mathrm{d}t}
   	\end{align} 
   \end{itemize}
 \end{enumerate}
 für elektromagenteische Felder: $T_\rho{}^\rho=0$
 für Telchen: $T_\rho{}^\rho=\mu c^2\sqrt{1-\beta^2}$
 allgemein gilt $T_\rho{}^\rho\geq0$
-Massenerhaltung: $\partial_\rho\left( \frac{1}{c}\mu \frac{dx^\rho}{dt}
+Massenerhaltung: $\partial_\rho\left( \frac{1}{c}\mu \frac{\mathrm{d}x^\rho}{\mathrm{d}t}
 \right)=0$
 
 \section{Elektrodynamik}
@@ -1423,7 +1427,7 @@ Massenerhaltung: $\partial_\rho\left( \frac{1}{c}\mu \frac{dx^\rho}{dt}
 $\Rightarrow$ Lorentzkraft
 \begin{align}
 \dot{\vec{p}}=e\vec{E}+\frac{e}{c}\vec{v}\times\vec{B}\\
-\Rightarrow mc\frac{du^\mu}{dS}=\frac{e}{c}F^{\mu\nu}u_\nu
+\Rightarrow mc\frac{\mathrm{d}u^\mu}{\mathrm{d}S}=\frac{e}{c}F^{\mu\nu}u_\nu
 \end{align}
 \subsubsection{Klassifizierung von Problemstellungen}
 \begin{itemize}
@@ -1465,13 +1469,13 @@ Maxwellgleichungen reduzieren sich auf
 für eine im Ursprung befindliche Punktladung\\
 Invarianz unter Drehungen $\rightarrow$ Ansatz: $\vec{E}=\vec{x}g(|\vec{x}|)$
 \begin{equation}
-\int d^3x \vec{\nabla}\vec{E}=\oint d\vec{f} \vec{E} \overset{!}{=}  \int
-d^3x4\pi\rho=4\pi e
+\int \mathrm{d}^3x \vec{\nabla}\vec{E}=\oint \mathrm{d}\vec{f} \vec{E} \overset{!}{=}  \int
+\mathrm{d}^3x4\pi\rho=4\pi e
 \end{equation} 
 wähle $V=$Kugel 
 \begin{equation}
-\Rightarrow \int d^3x
-\vec{\nabla}\vec{E}=\overset{!}{=}\int_\text{Kugeloberfläche} dcos(\theta)d\rho
+\Rightarrow \int \mathrm{d}^3x
+\vec{\nabla}\vec{E}=\overset{!}{=}\int_\text{Kugeloberfläche} \mathrm{d}\cos(\theta)\mathrm{d}\rho
 \underbrace{|\vec{x}|^3 g(|\vec{x}|)}=4\pi|\vec{x}|^3 g(|\vec{x}|)\\
 \Rightarrow \vec{E}=e\frac{\vec{x}}{|\vec{x}|^3}
 \end{equation}
@@ -1492,7 +1496,7 @@ Für ein System von Punktladungen gilt dann:
 \end{align}
 Für kontinuierliche Ladungsverteilungen gilt demnach:
 \begin{align}
-\phi(\vec{x})=\int d^3x'\frac{\rho(\vec{x}')}{|\vec{x}-\vec{x}'|}\\
+\phi(\vec{x})=\int \mathrm{d}^3x'\frac{\rho(\vec{x}')}{|\vec{x}-\vec{x}'|}\\
 \end{align}
 Dabei wird die folgende Relation verwendet:
 \begin{align}
@@ -1507,11 +1511,11 @@ Elektrostatische Energie für ein System von Ladungen\\
 Energiedichte $T^{00}=W=\frac{1}{8\pi}\left(\vec{E}^2+\vec{B}^2\right)$\\
 Energie 
 \begin{align}
-U&=\frac{1}{8\pi}\int d^3x \vec{E}^2\\
-&=-\frac{1}{8\pi}\int d^3x \vec{E}\vec{\nabla}\phi\\
-&=-\frac{1}{8\pi}\int^{+\infty}_{-\infty} d^3x \left(
+U&=\frac{1}{8\pi}\int \mathrm{d}^3x \vec{E}^2\\
+&=-\frac{1}{8\pi}\int \mathrm{d}^3x \vec{E}\vec{\nabla}\phi\\
+&=-\frac{1}{8\pi}\int^{+\infty}_{-\infty} \mathrm{d}^3x \left(
 \underbrace{\vec{\nabla}\left(\vec{E}\phi\right)}_{=0}-\phi\vec{\nabla}\vec{E}\right)\\
-&=\frac{1}{2}\int d^3x\phi\rho \text{ für } \rho=e\delta(\vec{x}-\vec{x}_0)
+&=\frac{1}{2}\int \mathrm{d}^3x\phi\rho \text{ für } \rho=e\delta(\vec{x}-\vec{x}_0)
 \end{align}
 Für eine Punktladung gilt demnach
 \begin{align}
@@ -1540,17 +1544,17 @@ U'=\frac{1}{3}\sum_a e_a \left(\sum_{b\neq a} \frac{e_b}{|\vec{x}_a-\vec{x}_b|}
 \paragraph{Relativistishes Teilchen im Coulombpotential}
 Coulombpotential $\phi=\frac{e'}{r}$ (Ladung $e'$ im Ursprung)\\
 Testladung $e \ll e'$ die das oben angegebene Potnetial nicht stört.
-Koordinaten der Testladung $\vec{x}=(r sin(\theta), r cos(\theta))$\\
-Durch Invarianz des Potnetials unter Drehungen gilt die Drehimpulserhaltung
+Koordinaten der Testladung $\vec{x}=(r \sin(\theta), r \cos(\theta))$\\
+Durch Invarianz des Potentials unter Drehungen gilt die Drehimpulserhaltung
 und damit bewegt sich das Teilchen nur in einer Ebene.\\
 (Lorentz-Kraft $\rightarrow$ Bew.-Gl.)\\
 Impuls: 
 \begin{align}
 \vec{p}=\gamma m \dot{\vec{x}} \text{ , }
 \gamma&=\frac{1}{\sqrt{1-\frac{\dot{\vec{x}}^2}{c^2}}}\\
-&=\gamma m \left(\dot{r}\text{ }sin(\theta)+r \dot{\theta} \text{
-}cos\theta,\dot{r} \text{
-}c\phi=\frac{e}{(R-\vec{R}\vec{\beta})}|_{t'=t-\frac{R}{c}}os\theta+r\dot{\theta} \text{ }sin\theta,0\right)\\
+&=\gamma m \left(\dot{r}\text{ }\sin(\theta)+r \dot{\theta} \text{
+}\cos\theta,\dot{r} \text{
+}c\phi=\frac{e}{(R-\vec{R}\vec{\beta})}|_{t'=t-\frac{R}{c}}os\theta+r\dot{\theta} \text{ }\sin\theta,0\right)\\
 p^2&=\gamma^2m^2(\dot{r}^2+r^2 \theta^2)
 \end{align}
 Drehimpuls: $\vec{M}=\vec{x}\times\vec{p}$\\
@@ -1575,8 +1579,8 @@ M=M(\dot{r},\dot{\theta})\\
 \dot{\theta}^2=\frac{M^2c^4}{r^2(\epsilon r -\alpha)^2}\\
 \dot{r}^2=c^2\frac{(\epsilon r -\alpha)^2-c^2(M^2+m^2c^2r^2)}{(\epsilon r
 -\alpha)^2}\\
-\Rightarrow \frac{d\theta}{dr}=f(r,\epsilon,M)\\
-\dot{\theta}=\frac{d\theta}{dt}\text{,  }\dot{r}=\frac{dr}{dt}
+\Rightarrow \frac{\mathrm{d}\theta}{\mathrm{d}r}=f(r,\epsilon,M)\\
+\dot{\theta}=\frac{\mathrm{d}\theta}{\mathrm{d}t}\text{,  }\dot{r}=\frac{\mathrm{d}r}{\mathrm{d}t}
 \end{align}
 Bahnkurve $\theta=\theta(r)$ oder $r=r(\theta)$ oder
 $f(r,\theta)=const$\\
@@ -1596,7 +1600,7 @@ keine Lösung ist periodisch (für $\alpha>0$ und $\alpha<0$):
 \begin{align}
 \text{z.B. } &|\alpha|<Mc\\
 (c^2M^2-\alpha^2)\frac{1}{r}&=c\sqrt{(M\epsilon)^2-m^2c^2(M^2c^2-\alpha^2)}
-cos\left(\theta\sqrt{1-\frac{\alpha^2}{2M^2}}\right)-\epsilon\alpha
+\cos\left(\theta\sqrt{1-\frac{\alpha^2}{2M^2}}\right)-\epsilon\alpha
 \end{align}
 offene Rosetten
 
@@ -1632,7 +1636,7 @@ entwickeln:
 \vec{D}\vec{\nabla}\frac{1}{R}+\ldots\\
 Q&=\text{Gesamtladung}=\sum e_a\\
 D&=\text{Dipolmoment}=\sum e_a \vec{x}_a \rightarrow \int
-d^3x\rho(\vec{x})\vec{x} \text{  (Dipolpotential)  }
+\mathrm{d}^3x\rho(\vec{x})\vec{x} \text{  (Dipolpotential)  }
 \end{align}
 Sortiert nach positiven und negativen Ladungen
 \begin{align}
@@ -1696,9 +1700,9 @@ Charakteristische Eigneschaften der Ladungsverteilung\\
 Multipole & $\phi^{(n)}$\\
 \hline
 $Q=$Gesamtladung$=$Monopol & $\sum \frac{e_a}{R}=\frac{Q}{R}$\\
-$\vec{D}=$Dipolmoment &$\frac{D}{R^2}cos(\theta)$\\
+$\vec{D}=$Dipolmoment &$\frac{D}{R^2}\cos(\theta)$\\
 $Q_{ij}=$ Quadrupolmoment & $\frac{Q}{R^3}\frac{1}{4}\left(3
-cos^2(\theta)-1\right)$\\
+\cos^2(\theta)-1\right)$\\
 \end{tabular}
 n-te Ableitung:\\ 
 (2n)-Polmoment $M{i_1\ldots i_n}$\\
@@ -1723,24 +1727,24 @@ Eignezustände des Drehimpulses
 \paragraph{Laplace in sphärischen Koordinaten}
 \begin{align}
 \laplace\phi=\frac{1}{r^2}\frac{\partial}{\partial r}\left( r^2
-\frac{\partial\phi}{\partial r} \right)+\frac{1}{r^2 sin(\theta)}
-\frac{\partial}{\partial \theta}\left( sin(\theta) \frac{\partial\phi} 
-{\partial \theta} \right)+\frac{1}{r^2 sin^2(\theta)} \frac{\partial^2\phi} 
+\frac{\partial\phi}{\partial r} \right)+\frac{1}{r^2 \sin(\theta)}
+\frac{\partial}{\partial \theta}\left( \sin(\theta) \frac{\partial\phi} 
+{\partial \theta} \right)+\frac{1}{r^2 \sin^2(\theta)} \frac{\partial^2\phi} 
 {\partial \Phi^2}
 \end{align}
 Lösung durch faktorisierung der Lösungsfunktion 
 \begin{align}
 \phi(r,\theta,\Phi)=R(r)P(\theta)f(\Phi)\\
 \text{für R:  Lösungen}\propto c^{(1)}r^{l+1}+c^{(2)} r^{-l}\\
-\text{für P:  }\frac{1}{sin(\theta)}\frac{d}{d\theta}\left( sin(\theta)
-\frac{dP(\theta)}{d\theta}\right)+\left( l(l+1)-\frac{m^2}{sin^2(\theta)} 
+\text{für P:  }\frac{1}{\sin(\theta)}\frac{\mathrm{d}}{\mathrm{d}\theta}\left( \sin(\theta)
+\frac{\mathrm{d}P(\theta)}{\mathrm{d}\theta}\right)+\left( l(l+1)-\frac{m^2}{\sin^2(\theta)} 
 P(\theta) \right)=0\\
-\text{für f:  }\frac{d^2}{d\Phi^2}f(\Phi)+m^2f(\Phi)=0\\
+\text{für f:  }\frac{\mathrm{d}^2}{\mathrm{d}\Phi^2}f(\Phi)+m^2f(\Phi)=0\\
 \Rightarrow \text{Lösung:} f=e^{im\Phi} \text{ , }m=0,\pm1,\pm2,\ldots\\
 \text{für }P(\theta) P_l^m(\theta)=(-1)^m
-(1-cos^2(\theta))^{\frac{m}{2}}\frac{d^m}{dcos(\theta)^m}P_l(cos(\theta))\\
+(1-cos^2(\theta))^{\frac{m}{2}}\frac{\mathrm{d}^m}{\mathrm{d}cos(\theta)^m}P_l(cos(\theta))\\
 l=0,1,2\ldots \text{ und } m=-l,-l+1,\ldots,l-1,l\\
-\text{und }P_l(z)=\frac{1}{2^ll!}\frac{d^l}{dz^l}(z^2-1)^l\\
+\text{und }P_l(z)=\frac{1}{2^ll!}\frac{\mathrm{d}^l}{\mathrm{d}z^l}(z^2-1)^l\\
 \text{darraus folgen Kugelflächenfunktionen}\\
 Y_{lm}(\theta,\Phi)=\sqrt{\frac{2l+1}{4\pi}}\sqrt{\frac{(l-m)!}{(l+m)!}}
 P^m_l(cos(\theta))e^{im\Phi}
@@ -1752,7 +1756,7 @@ Vollständigkeit
 \end{align}
 Orthoonalität:
 \begin{align}
-\int_{-1}^{+1}dcos\theta\int_0^{2\pi}d\Phi Y_{lm}(\theta,\Phi)
+\int_{-1}^{+1}\mathrm{d}cos\theta\int_0^{2\pi}\mathrm{d}\Phi Y_{lm}(\theta,\Phi)
 Y_{l'm'}^*(\theta,\Phi)=\delta_{mm'}\delta_{ll'}
 \end{align}
 $\rightarrow$ beliebige Funktion auf der Einheitskugel ist Linearkombination
@@ -1764,7 +1768,7 @@ der $Y_{lm}$ (Basis)
 M_{2l}\rightarrow2l-\text{Pole}\\
 \laplace\phi(\vec{x})=-4\pi\delta(\vec{x})
 \end{align}
-Eigenfunktionen de Laplace-Operators\\
+Eigenfunktionen des Laplace-Operators\\
 Entwicklung nach Kugelflächenfunktionen
 \begin{align}
 Y_{lm}(\theta,\Phi)\rightarrow P_l^m,P_l
@@ -1780,10 +1784,10 @@ $\rightarrow$ nur $m=0$, nur $P_l$\\
 explizit für Greensche Funktion
 \begin{align}
 \frac{1}{|\vec{x}-\vec{x}'|}&=\frac{1}{\sqrt{\vec{x}^2-2\vec{x}\vec{x}'+\vec{x}'^2}}\\
-&=\begin{cases}\frac{1}{R\sqrt{1-2\frac{r'}{R}cos\alpha+\frac{r'^2}{R^2}}}
-\text{  } R>r' \text{ mit } t=\frac{r'}{R} \text { und }z=cos\alpha\\
-\frac{1}{r'\sqrt{1-2\frac{R}{r'}cos\alpha+\frac{R^2}{r'^2}}} \text{  } r'>R
-\text{ mit } t=\frac{R}{r'} \text { und }z=cos\alpha\end{cases}\\
+&=\begin{cases}\frac{1}{R\sqrt{1-2\frac{r'}{R}\cos\alpha+\frac{r'^2}{R^2}}}
+\text{  } R>r' \text{ mit } t=\frac{r'}{R} \text { und }z=\cos\alpha\\
+\frac{1}{r'\sqrt{1-2\frac{R}{r'}\cos\alpha+\frac{R^2}{r'^2}}} \text{  } r'>R
+\text{ mit } t=\frac{R}{r'} \text { und }z=\cos\alpha\end{cases}\\
 \underbrace{\frac{1}{\sqrt{1-2zt+t^2}}}_{\text{erzeugende
 Funktion der Legende Polynome}}&=\sum^\infty_{l=0}t^l P_l(z)
 \end{align}
@@ -1792,8 +1796,8 @@ Spezialfall: $z=1$:
 \frac{1}{\sqrt{(1-t)^2}}=\frac{1}{1-t}=\sum^\infty_{l=0}t^l
 \underbrace{P_l(1)}_{=1}\\
 \rightarrow
-\phi(\vec{x})=-4\pi\int d^3x'\frac{\rho(\vec{x}')}{|\vec{x}-\vec{x}'|}\\
-=-4\pi\sum^\infty_{l=0}\frac{1}{R^{l+1}}\underbrace{\int dr' r'^2\int dz 2\pi
+\phi(\vec{x})=-4\pi\int \mathrm{d}^3x'\frac{\rho(\vec{x}')}{|\vec{x}-\vec{x}'|}\\
+=-4\pi\sum^\infty_{l=0}\frac{1}{R^{l+1}}\underbrace{\int \mathrm{d}r' r'^2\int \mathrm{d}z 2\pi
 \rho(r',z)r'^l P_l(z)}_{M_{2l}}
 \end{align}
 \paragraph{Anwendung für allgemeine Ladungsverteilung} $\rho(\vec{x})$
@@ -1829,9 +1833,9 @@ Y_{l,m}(\theta,\Phi)Y^*_{l,m}(\theta',\Phi')
 \end{align}
 für das Potential gilt dann:
 \begin{align}
-\phi(\vec{x})&=-4\pi\int d^3x' G(\vec{x},\vec{x}')\rho(\vec{x}')\\
+\phi(\vec{x})&=-4\pi\int \mathrm{d}^3x' G(\vec{x},\vec{x}')\rho(\vec{x}')\\
 &=\sum_{l,m}\frac{4\pi}{2l+1}\frac{1}{R^{l+1}}Y_{l,m}(\theta,\Phi)M_{l,m}\\
-\text{mit} M_{lm}=\int dr' (r')^2 \int dcos\theta'\int d\Phi' (r')^l
+\text{mit} M_{lm}&=\int \mathrm{d}r' (r')^2 \int \mathrm{d}\cos\theta'\int \mathrm{d}\Phi' (r')^l
 Y^*_{l,m}(\theta',\Phi') \rho(\vec{x}')\\=\text{sphärische Multipolmomente}
 \end{align}
 Somit können wir die Eigenschaften von $\rho$ faktorisieren.
@@ -1847,7 +1851,7 @@ Wechselwirkungsengergie für ein System von Punktladungen
 \begin{align}
 U=\sum_a e_a\phi(\vec{x_a})\\
 \text{Einsetzen:}
-U=Q\phi(0)+\underbrace{\vec{D}}_{\text{Orientierung Winkel}cos\alpha}
+U=Q\phi(0)+\underbrace{\vec{D}}_{\text{Orientierung Winkel}\cos\alpha}
 \overbrace{\vec{\nabla}\phi(0)}_{-\vec{E}}+ \frac{1}{6}Q_{ij}\frac{\partial^2\phi}{\partial x_j'\partial x_i'}(0)+\ldots\\
 \frac{\partial U}{\partial\alpha}\rightarrow \text{ Drehmoment}\\
 U=Q\phi-\vec{D}\vec{E}+\ldots
@@ -1871,8 +1875,8 @@ $\Rightarrow$ Magnetostatik ist Nährung\\
 physikalische Nährung: zeitliche Mittelung!\\
 Diese ist möglich falls:
 \begin{align}
-\overline{\dot{\vec{E}}}=\frac{1}{T}\int_0^T dt
-\frac{d\vec{E}}{dt}=\underbrace{\frac{1}{T}}_{\text{groß, }T\rightarrow\infty}
+\overline{\dot{\vec{E}}}=\frac{1}{T}\int_0^T \mathrm{d}t
+\frac{\mathrm{d}\vec{E}}{\mathrm{d}t}=\underbrace{\frac{1}{T}}_{\text{groß, }T\rightarrow\infty}
 \left( \vec{E}(T)-\vec{E}(0) \right)\rightarrow0
 \end{align}
 Somit ist die Vorraussetzung $\vec{E}(t)$ beschränkt.\\
@@ -1883,23 +1887,23 @@ endlichen Impulsen bewegen.
 Ströme - bewegte Ladungen\\
 Zeitmittelung
 \begin{align}
-\bar{\dot{\vec{E}}}=\frac{1}{T}\int_0^T dt
-\frac{d\vec{E}}{dt}=\frac{\vec{E}(0)-\vec{E}(0)}{T}\rightarrow 0 \text{ für }
+\bar{\dot{\vec{E}}}=\frac{1}{T}\int_0^T \mathrm{d}t
+\frac{\mathrm{d}\vec{E}}{\mathrm{d}t}=\frac{\vec{E}(0)-\vec{E}(0)}{T}\rightarrow 0 \text{ für }
 T\rightarrow \infty \text{ und } \vec{E}(t) \text{ ist begentzt}
 \end{align}
 Stationäre Bewegung
 \begin{align}
 \rightarrow \bar{\dot{\rho}}=0\\
 \text{Kontinuitätsgleichung} \vec{\nabla}\bar{{\vec{j}}}=0\\
-0=\int d^3x\left( \frac{\partial}{\partial x^i}\bar{j}^i \right)x^k=
--\int d^3x \bar{j}^i \left( \frac{\partial}{\partial x^i}x^k \right)=-\int d^3x
+0=\int \mathrm{d}^3x\left( \frac{\partial}{\partial x^i}\bar{j}^i \right)x^k=
+-\int \mathrm{d}^3x \bar{j}^i \left( \frac{\partial}{\partial x^i}x^k \right)=-\int \mathrm{d}^3x
 \bar{j}^k
 \end{align}
 Vorraussetzunge für Anwendbarkeit der Magnetostatik
 \begin{itemize}
   \item Ladungen zu allen Zeiten in endlichem Raumgebiet
   \item endliche Impulse
-  \item ausreichend lange Meßzeit (schnelle Anpassung der Ladungen an geänderte
+  \item ausreichend lange Messzeit (schnelle Anpassung der Ladungen an geänderte
   äußere Bedingungen)
   \item schwache Magnetfelder
 \end{itemize}
@@ -1919,9 +1923,9 @@ Elektrostatik}
 \end{align}
 Als Lösung folgt also:
 \begin{align}
-\bar{\vec{A}}(\vec{x})=\frac{1}{c}\int d^3x' \frac{\bar{\vec{j}}(\vec{x'})}
+\bar{\vec{A}}(\vec{x})=\frac{1}{c}\int \mathrm{d}^3x' \frac{\bar{\vec{j}}(\vec{x'})}
 {|\vec{x}-\vec{x}'|}
-\rightarrow \bar{\vec{B}}(\vec{x})=\frac{1}{c}\int d^3x'
+\rightarrow \bar{\vec{B}}(\vec{x})=\frac{1}{c}\int \mathrm{d}^3x'
 \frac{\bar{\vec{j}}(\vec{x'})\times\left( \vec{x}-\vec{x}' \right)}
 {|\vec{x}-\vec{x}'|} \text{  für} \bar{\vec{A}},\bar{\vec{B}}\rightarrow 0\text{
 im Unendlichen}
@@ -1931,23 +1935,23 @@ im Unendlichen}
 \frac{1}{|\vec{x}-\vec{x}'|}=\frac{1}{R}-\vec{x}'\vec{\nabla}\frac{1}{R}+\ldots\\
 \frac{1}{|\vec{x}-\vec{x}'|}=\frac{1}{R}-\frac{\vec{x}'\vec{x}}{R^3}+\ldots\\
 \text{in }\bar{\vec{A}} \text{eingesetzt}
-\text{1. Term:} \int d^3 x' \frac{\bar{\vec{j}}(\vec{x}')}{R}=0
+\text{1. Term:} \int \mathrm{d}^3 x' \frac{\bar{\vec{j}}(\vec{x}')}{R}=0
 \text{(d.h. keine Monopole)}\\
-\text{2. Term:} \frac{1}{cR^3}\int d^3 x'\bar{\vec{j}}(\vec{x}')(\vec{x}'\vec{x})\\
+\text{2. Term:} \frac{1}{cR^3}\int \mathrm{d}^3 x'\bar{\vec{j}}(\vec{x}')(\vec{x}'\vec{x})\\
 \end{align}
 für Punktladungen gilt also
 \begin{align}
-\vec{j}(\vec{x}')=\sum_a e_a \vec{v}_a \text{ , }
-\vec{v}_a=\frac{d\vec{x}_a}{dt}\\
-\text{auszurechnen}\\
-\overline{\sum_a e_a \vec{v}_a(\vec{x}_a\vec{x})}=\overline{\sum_a e_a
-\frac{d\vec{x}_a}{dt}(\vec{x}_a\vec{x})}\\
-=\underbrace{\overline{\frac{1}{2}\frac{d}{dt}\sum_a e_a
-\vec{x}_a(\vec{x}_a\vec{x})}}_{=0 \text{ falls Ladungen in einem räumlich
-begrentzten Bereich bleiben}} +\frac{1}{2}\overline{\sum_a e_a
-\frac{d\vec{x}_a}{dt}(\vec{x}_a\vec{x})}-\frac{1}{2}\overline{\sum_a e_a \vec{x}_a
+\vec{j}(\vec{x}')&=\sum_a e_a \vec{v}_a \text{ , }
+\vec{v}_a=\frac{\mathrm{d}\vec{x}_a}{\mathrm{d}t} %\\
+\text{ auszurechnen}\\
+\overline{\sum_a e_a \vec{v}_a(\vec{x}_a\vec{x})} &=\overline{\sum_a e_a
+\frac{\mathrm{d}\vec{x}_a}{\mathrm{d}t}(\vec{x}_a\vec{x})}\\
+ &=\underbrace{\overline{\frac{1}{2}\frac{\mathrm{d}}{\mathrm{d}t}\sum_a e_a
+\vec{x}_a(\vec{x}_a\vec{x})}}_{\substack{=0 \text{ falls Ladungen in einem}\\ \text{ räumlich
+begrentzten Bereich bleiben}}} +\frac{1}{2}\overline{\sum_a e_a
+\frac{\mathrm{d}\vec{x}_a}{\mathrm{d}t}(\vec{x}_a\vec{x})}-\frac{1}{2}\overline{\sum_a e_a \vec{x}_a
 (\vec{v}_a\vec{x})}\\
-=\frac{1}{2}\overline{\sum_a e_a \left( \vec{v}_a
+ &=\frac{1}{2}\overline{\sum_a e_a \left( \vec{v}_a
 (\vec{x}_a\vec{x})-\vec{x}_a
 (\vec{v}_a\vec{x}) \right)}=\frac{1}{2}\sum_a e_a \overline{\left(
 \vec{x}_a\times\vec{v}_a \right)\times\vec{x}}
@@ -1969,14 +1973,14 @@ falls Verhältnis $\frac{e_a}{m_a}$ für alle Teichen gleich ist gilt:
 \end{equation} 
 magnetisches Dipolmoment $\leftarrow$ mechanischer Drehimpuls.\\
 Lorentz-Kraft: $\bar{\vec{F}}=\sum
-\frac{e}{c}\overline{\vec{v}\times\vec{B}}=\overline{\frac{d}{dt}\left(\ldots
+\frac{e}{c}\overline{\vec{v}\times\vec{B}}=\overline{\frac{\mathrm{d}}{\mathrm{d}t}\left(\ldots
 \right)}=0$\\
 Drehmoment: 
 \begin{align}
 \bar{\vec{K}}=\sum\frac{e}{c}\overline{\underbrace{\vec{x}\times(\vec{v}
 \times\vec{B})}_{\vec{v}(\vec{x}\vec{B}-\vec{B}(\vec{v}\vec{x})}}\neq0\\
 =\overline{\vec{v}(\vec{x}\vec{B}}-\xout{\frac{1}{2}\left(
-\overline{\vec{B}\frac{d\vec{x}^2}{dt}} \right)}\\
+\overline{\vec{B}\frac{\mathrm{d}\vec{x}^2}{\mathrm{d}t}} \right)}\\
 %\bar{\vec{K}}=\sum_a \frac{e_a}{c} \overline{\vec{v_a}(\vec{x_a}\vec{B}}\\
 %=\vec{m}\times\bar{\vec{B}}
 \end{align}
@@ -1985,7 +1989,7 @@ Drehmoment:
 \vec{m}\times\bar{\vec{B}}=\frac{2mc}{e}\dot{\vec{m}}\\
 \dot{\vec{m}}=-\vec{\Omega}\times\vec{m}\\
 \vec{\Omega}=\frac{e}{2mc}\vec{B}\\
-\vec{K}=\frac{d\vec{L}}{dt}=\frac{\Delta\vec{L}}{\Delta t}\\
+\vec{K}=\frac{\mathrm{d}\vec{L}}{\mathrm{d}t}=\frac{\Delta\vec{L}}{\Delta t}\\
 \Delta t \text{groß }>>\text{Zeitmittelung}
 \end{align}
 Vorsicht, alle Mittelungen hier sind nur über die Mikroskopischen Skalen gedacht
@@ -1995,7 +1999,7 @@ und kein Zeitmittel über den gesamten betrachteten Zeitraum.
 $\vec{B}$ sei zeitlich konstant\\
 Herleitung über den Lagrangeformalismus. (in Magnetostatik, also $\phi=0$)\\
 (allgemein: $ S=-\frac{1}{c^2}\int d^4x j^\mu A_\mu\rightarrow \frac{1}{c}\int
-dt \int d^3x \vec{j}\vec{A}$)
+\mathrm{d}t \int \mathrm{d}^3x \vec{j}\vec{A}$)
 \begin{align}
 L&=\sum_a\frac{e_a}{c}\vec{v}_a\vec{A} \text{ für eine Punktladung}\\
 &|\vec{A}=\frac{1}{2}\vec{B}\times\vec{x} \\&|\text{ für ein konstantes und
@@ -2016,7 +2020,7 @@ mikroskopisch:
 \begin{itemize}
   \item Punktförmige Ladungen im Vakuum
   \item teilweise gebunden, halten sich in  begrenzten Raumgebieten auf
-  \item ortsfeste Ladungen derne Bewegung man vernachlässigt (Atomkerne)
+  \item ortsfeste Ladungen deren Bewegung man vernachlässigt (Atomkerne)
   \item mehr oder weniger frei bewegliche Elektronen
   \item magnetische Momente und Spins treten auf
 \end{itemize}
@@ -2030,7 +2034,7 @@ Wirft Fragen auf:
   \item Ab wann beginnt die Nährung eines Kontinuums zu nicht
   vernachlässigbarenFehlern zu führen
 \end{itemize}
-Diese Mittelung wird hier nicht weiter notiert sondern für alle GRößen implizit
+Diese Mittelung wird hier nicht weiter notiert sondern für alle Größen implizit
 angenommen.
 
 \paragraph{Überblick}
@@ -2091,15 +2095,15 @@ Maxwellgleichungen mit Randbedingungen
 \end{itemize}
 
 Ladungsverteilung auf Oberflächen\\
-Flächenladungsdichte $\sigma=\rho dz$ ($\rho=\frac{Q}{dV}=\frac{Q}{dF
-dz}=\sigma \frac{1}{dz}$)
+Flächenladungsdichte $\sigma=\rho \mathrm{d}z$ ($\rho=\frac{Q}{\mathrm{d}V}=\frac{Q}{\mathrm{d}F
+\mathrm{d}z}=\sigma \frac{1}{\mathrm{d}z}$)
 %XXXX Einfügen der Grafik Y3
 \begin{align}
 \vec{\nabla}\vec{E}&=4\pi\rho\\
-\underset{\text{Volumenintegral}}{\Rightarrow}\int d^3x \vec{\nabla}\vec{E}&=
-4\pi \int d^3x \rho\\
-\underset{\text{Satz von Gauß}}{\Rightarrow}\oint d\vec{f}\vec{E}&=4\pi\oint
-d\vec{f}\vec{n}\sigma\\
+\underset{\text{Volumenintegral}}{\Rightarrow}\int \mathrm{d}^3x \vec{\nabla}\vec{E}&=
+4\pi \int \mathrm{d}^3x \rho\\
+\underset{\text{Satz von Gauß}}{\Rightarrow}\oint \mathrm{d}\vec{f}\vec{E}&=4\pi\oint
+\mathrm{d}\vec{f}\vec{n}\sigma\\
 \Rightarrow E_{\text{normal}}&=4\pi\sigma 
 \end{align}
 
@@ -2109,7 +2113,7 @@ $\rightarrow$ $\vec{E}\neq0$ im Inneren möglich\\
 Bezeichnungen:
 \begin{itemize}
   \item mikroskopisch $\vec{e}$
-  \item makroskoopisch $\vec{E}=\frac{1}{V}\int_V d^3x \vec{e}(\vec{x})$
+  \item makroskoopisch $\vec{E}=\frac{1}{V}\int_V \mathrm{d}^3x \vec{e}(\vec{x})$
 \end{itemize}
 
 Maxwellgleichungen nach räumlicher Mittelung
@@ -2118,7 +2122,7 @@ Maxwellgleichungen nach räumlicher Mittelung
 \end{align}
 wichtiger Fall: keine zusätzlichen Ladungen auf dem Nichtleiter
 \begin{align}
-\rightarrow \int d^3x \rho =0
+\rightarrow \int \mathrm{d}^3x \rho =0
 \end{align}
 für beliebig geformtes Volumen $\Rightarrow$
 \begin{align}
@@ -2127,19 +2131,19 @@ für beliebig geformtes Volumen $\Rightarrow$
 Betrachte Oberlfäche, die den Körper ganz einschließt
 %XXXX Zeichnung Y4 neben Gleichung einfügen
  \begin{align}
- 0=\int d^3x\rho=-\int d^3x \vec{\nabla}\vec{P}\underset{\text{Gauß}}{=}-\oint
- d\vec{f}\\
+ 0=\int \mathrm{d}^3x\rho=-\int \mathrm{d}^3x \vec{\nabla}\vec{P}\underset{\text{Gauß}}{=}-\oint
+ \mathrm{d}\vec{f}\\
  \Rightarrow
  \vec{P}=0 \text{ im Außenraum}
  \end{align}
-Bemerkung: $\vec{P}$ ist damt nicht eindeutig bestimmt
+Bemerkung: $\vec{P}$ ist damit nicht eindeutig bestimmt
 \begin{align}
 \vec{P}\rightarrow \vec{P}+\vec{\nabla}\times\vec{f} 
 \end{align}
 Führt für beliebige Vektorfunktion $f$ zu keiner Änderung der physikalischen
 Aussage. \\
-$\vec{P}$ wird dieelektrische Polarisation genannt\\
-$\vec{P}\neq0$ in polariierbaren Medien\\
+$\vec{P}$ wird dielektrische Polarisation genannt\\
+$\vec{P}\neq0$ in polarisierbaren Medien\\
 betrachte nun das Volumenelemnent an der Oberfläche
 %XXXX Füge GRafik Y5 ein 
 \begin{align}
@@ -2147,12 +2151,12 @@ betrachte nun das Volumenelemnent an der Oberfläche
 \end{align} 
 $\vec{P}$ ist die Dichte des elektrischen Dipolmoments
 \begin{align}
-\int d^3x \vec{x}\rho(\vec{x})=-\int d^3x \vec{x}(\vec{\nabla}\vec{P})\\
-\rightarrow \int d^3\!x x_k\rho(\vec{x})&=-\int d^3x
+\int \mathrm{d}^3x \vec{x}\rho(\vec{x})=-\int \mathrm{d}^3x \vec{x}(\vec{\nabla}\vec{P})\\
+\rightarrow \int \mathrm{d}^3\!x x_k\rho(\vec{x})&=-\int \mathrm{d}^3x
 \left(\partial_i(x_kP_i)-P_i\underbrace{(\partial x_k)}_{\delta_{ik}}\right)\\
-&=\underbrace{\int d^3x\left(\partial_i(x_kP_i)\right)}_{\text{Satz von
-Gauß+Randterme}=0} \int d^3x P_k\\
-=\int d^3x P_k
+&=\underbrace{\int \mathrm{d}^3x\left(\partial_i(x_kP_i)\right)}_{\text{Satz von
+Gauß+Randterme}=0} \int \mathrm{d}^3x P_k\\
+=\int \mathrm{d}^3x P_k
 \end{align}
 zusammen ergibt sich
 \begin{align}
@@ -2160,7 +2164,7 @@ zusammen ergibt sich
 \Rightarrow &\vec{\nabla}\vec{D}=0 & \vec{D}=\vec{E}+4\pi\vec{P}
 \end{align}
 bei zusätzlichen Ladungen $\vec{\nabla}\vec{D}=4\pi\rho_{\text{extern}}$\\
-$\vec{D}$ heißt dielektrische Induktion oder (di)elektrsiche Verschiebung\\
+$\vec{D}$ heißt dielektrische Induktion oder (di)elektrische Verschiebung\\
 Feld $\vec{E}$ verschiebt im mikroskopischen Ladungen und erzeugt damit eine
 Dipoldichte, die von den Materialeigenschaften abhängt.\\
 Zusätzliche Informationen: Zusammenhang zwischen $\vec{E}$ und $\vec{D}$\\
@@ -2188,7 +2192,7 @@ räumliche Mittelung\\
 mikroskopisches elektrisches Feld $\vec{e}(\vec{x})$\\
 makroskopisches elektrisches Feld $\vec{E}(\vec{x})$\\
 \begin{align}
-\vec{E}(\vec{x})=\frac{1}{V(\vec{x})}\int_{V(\vec{x})} d^3x' \vec{e}(\vec{x}')
+\vec{E}(\vec{x})=\frac{1}{V(\vec{x})}\int_{V(\vec{x})} \mathrm{d}^3x' \vec{e}(\vec{x}')
 \end{align}
 
 \subsection{Magnetostatik in Materie}
@@ -2207,7 +2211,7 @@ Materie:
 %Bild Y6, Y7 einfügen
 
 \begin{align}
-\int_{\partial V} d\vec{f} \overline{\rho \vec{v}}=0
+\int_{\partial V} \mathrm{d}\vec{f} \overline{\rho \vec{v}}=0
 \end{align}
 Ansatz
 \begin{align}
@@ -2215,10 +2219,10 @@ Ansatz
 \end{align}
 im Allgemeinen gilt in Materie $\vec{M}\neq0$, denn
 \begin{align}
-c \int_{F} d\vec{f} \vec{\nabla}\times\vec{M}=c \oint_{\partial F} d\vec{x}
+c \int_{F} \mathrm{d}\vec{f} \vec{\nabla}\times\vec{M}=c \oint_{\partial F} \mathrm{d}\vec{x}
 \vec{M}=0
 \end{align}
-(Analogie: Polarisation $\int_V d^3x\rho=\int d^3x\vec{\nabla}\times\vec{P}=0$\\
+(Analogie: Polarisation $\int_V \mathrm{d}^3x\rho=\int \mathrm{d}^3x\vec{\nabla}\times\vec{P}=0$\\
 $\overline{\rho \vec{v}}$ einsetzen:
 \begin{align}
 \vec{\nabla}\times\vec{B}=4\pi \vec{\nabla}\times\vec{M}\\
@@ -2231,22 +2235,22 @@ $\overline{\rho \vec{v}}$ einsetzen:
 \vec{M}\rightarrow\vec{M}+\vec{\nabla}f\\
 \vec{\nabla}\times(\vec{\nabla}f)=0
 \end{align}
-festlegen: miktoskopische Eigenschaften
+festlegen: mikroskopische Eigenschaften
 \end{itemize}
 $\vec{M}=$Dichte des magnetischen Moments
 \begin{align}
-\frac{1}{2c}\int d^3x \vec{x}\times\overline{\rho\vec{v}}=\frac{1}{2}\int d^3x
+\frac{1}{2c}\int \mathrm{d}^3x \vec{x}\times\overline{\rho\vec{v}}=\frac{1}{2}\int \mathrm{d}^3x
 \vec{x}\times(\vec{\nabla}\times\vec{M})\\
 =\frac{1}{2}\underbrace{\int_{\partial V}
-\vec{x}\times(d\vec{f}\times\vec{M}})_{=0}-\frac{1}{2}\int d^3x
+\vec{x}\times(\mathrm{d}\vec{f}\times\vec{M}})_{=0}-\frac{1}{2}\int \mathrm{d}^3x
 \underbrace{(\vec{M}\times\vec{\nabla})\times\vec{x}}_{=-2\vec{M}}\\
-=\int d^3x \vec{M}
+=\int \mathrm{d}^3x \vec{M}
 \end{align}
 \subparagraph{Bemerkungen zu $\vec{M}$}
 \begin{itemize}
 \item $\vec{M}=0$ in magnetischen Materialien
 \item einfache Situation(häufig!): $\vec{B}=\mu\vec{H}$\\
-$\mu=$magnetische Permiabilität\\
+$\mu=$ magnetische Permiabilität\\
 $\vec{M}=\chi\vec{H}$\\
 $\chi=$magnetische Suzeptibilität $\chi=\frac{\mu-1}{4\pi}$
 \item Aus der Thermodynamik lässt sich folgern $\Rightarrow \mu>0$
@@ -2317,16 +2321,16 @@ x=ct+\text{Konstanten}
 $\rightarrow$ Feldkonfiguration bewegti sich in x-Richtung mit Lichtgeschwindigkeit (analog  für $f_1=0$)
 
 \subparagraph{Monochromatische Wellen}
-Lösung mit zeitabhängigkeit $\propto cos(\omega t+\alpha)$\\
+Lösung mit zeitabhängigkeit $\propto \cos(\omega t+\alpha)$\\
 Einsetzen in die Wellengleichung:
 \begin{align}
 \frac{\partial^2}{\partial t^2 }f=-\omega^2f\\
 \laplace f+ \frac{\omega^2}{c^2}f=0\\
-\Rightarrow f\propto cos(\omega (t\pm\frac{x}{c})+\alpha_0)
+\Rightarrow f\propto \cos(\omega (t\pm\frac{x}{c})+\alpha_0)
 \end{align}
 Idee komplexe Funktionen
 \begin{align}
-e^{i\alpha}=cos(\alpha)+isin(\alpha) , Re(e^{i\alpha})=cos(\alpha)\\
+e^{i\alpha}=\cos(\alpha)+i\sin(\alpha) , Re(e^{i\alpha})=\cos(\alpha)\\
 \text{Regel: } e^{i\alpha}e^{i\beta}=e^{i(\alpha+\beta)}\\
 \text{Für monochromatische Wellen: } \vec{A}=Re(\vec{A}_0 * e^{i
 \omega(t-\frac{x}{c})})
@@ -2344,11 +2348,11 @@ Allgemeine Lösung for $A^i$,$E^i$,$B^i\rightarrow f(x,t)$
 f=f_1(x-ct)+f_2(x+ct)
 \end{equation}
 Basislösungen\\
-Monochromatische Wellen $f_1\propto cos(\omega \left( t-\frac{x}{c}
+Monochromatische Wellen $f_1\propto \cos(\omega \left( t-\frac{x}{c}
 \right))$\\
 oder $\vec{A}=Re(\underbrace{\vec{A_0}}_{constant} *
 e^{i\omega(t-\frac{x}{c})}$\\ 
-für beliebige Richtungen lässt sich dies verallgmeinern:\\
+für beliebige Richtungen lässt sich dies verallgemeinern:\\
 Einheitsvektor $\vec{n}$ 
 \begin{align}
 \vec{A}=Re(\underbrace{\vec{A_0}}_{constant} * e^{i(\vec{k}\vec{x}-\omega t)}\\
@@ -2420,8 +2424,8 @@ $\Rightarrow$ z-Achse $\parallel \vec{b}_2$\\
 \begin{align}
 \vec{E}=Re(\vec{E}_0 e^{i(\vec{k}\vec{x}-\omega t)})\\
 E_x=0\\
-E_y=b_1 cos(\vec{k}\vec{x}-\omega t -\alpha)\\
-E_z=\pm b_2 sin(\vec{k}\vec{x}-\omega t -\alpha)\\
+E_y=b_1 \cos(\vec{k}\vec{x}-\omega t -\alpha)\\
+E_z=\pm b_2 \sin(\vec{k}\vec{x}-\omega t -\alpha)\\
 \end{align}
 i.A. $b_1\neq b_2$
 \begin{align}
@@ -2438,22 +2442,22 @@ allgemein elliptische Polarisation
 \end{itemize}
 Überlagerung zweier linear polarisierter Wellen $\rightarrow$ elliptische
 Polarisation. \\ Basislösungen $\checkmark$\\
-Fourier-Zerlegung ($cos(\omega t)$, $e^{i\omega t}\rightarrow$vollständig)
+Fourier-Zerlegung ($\cos(\omega t)$, $e^{i\omega t}\rightarrow$vollständig)
 \begin{itemize}
   \item für periodische Lösungen: $f(t+T)=f(t)$\\ 
   Fourierreihe: 
   \begin{itemize}
   \item Grundfrequenz $\omega_0=\frac{2\pi}{T}$, \begin{align}
   f(t)&=\sum_{n=-\infty}^\infty f_n e^{-i\omega_0nt}\\
-  \text{mit } f_n&=\frac{1}{T}\int_{-\frac{T}{2}}^{+\frac{T}{2}}dt f(t)
+  \text{mit } f_n&=\frac{1}{T}\int_{-\frac{T}{2}}^{+\frac{T}{2}}\mathrm{d}t f(t)
   e^{i\omega_0 t} \\
   \text{für} f^*(t)&=f(t) \Rightarrow f_n^*=f_{-n}
   \end{align}
 \end{itemize}
 \item allgemein: Fourier-Integrale \\(diskretes Spektrum von 'Grund'frequenzen
 + kontinuierliches Spektrum) \begin{align}
-f(t)&=\frac{1}{2\pi}\int_{-\infty}^{+\infty} d\omega f(\omega)e^{-i\omega t}
-\text{mit} f(\omega)&=\int_{-\infty}^{+\infty} dt f(t)e^{+i\omega t}\\
+f(t)&=\frac{1}{2\pi}\int_{-\infty}^{+\infty} \mathrm{d}\omega f(\omega)e^{-i\omega t}
+\text{mit} f(\omega)&=\int_{-\infty}^{+\infty} \mathrm{d}t f(t)e^{+i\omega t}\\
 &\text{für reelle } f(t) \Rightarrow f^*(\omega)=f(-\omega)
 \end{align}
 \end{itemize}
@@ -2480,7 +2484,7 @@ Fourierentwicklung\\
 Ebene Wellen$=$Basislösungen\\
 Orthogonalitätsrelation
 \begin{equation}
-\int_{-\infty}^{+\infty} dt e^{i(\omega-\omega')t}=2\pi\delta(\omega-\omega')
+\int_{-\infty}^{+\infty} \mathrm{d}t e^{i(\omega-\omega')t}=2\pi\delta(\omega-\omega')
 \end{equation}
 speziell: für periodische Lösungen gilt:\\
 $\rightarrow$ disktretes Spektrum
@@ -2500,9 +2504,9 @@ für diskretes Spektrum, $\omega_0 T=2\pi$
 f(t)&=\sum_{n=-\infty}^{+\infty} f_n  e^{-i\omega_0 n t} \text{  (}f \text{ ist
 reel:}f_n^*=f_{-n}\\
 f^2(t)&=\sum_{n,m=-\infty}^{+\infty} f_n f_m  e^{-i\omega_0 (n+m) t}\\
-\overline{f^2(t)}&=\frac{1}{T} \int_{-\frac{T}{2}}^{\frac{T}{2}} f^2(t) dt\\
+\overline{f^2(t)}&=\frac{1}{T} \int_{-\frac{T}{2}}^{\frac{T}{2}} f^2(t) \mathrm{d}t\\
 &=\sum_{n,m=-\infty}^{+\infty} f_n f_m \underbrace{\frac{1}{T}
-\int_{-\frac{T}{2}}^{\frac{T}{2}} e^{-i\omega_0 (n+m) t}dt}_{=0 \text{ außer
+\int_{-\frac{T}{2}}^{\frac{T}{2}} e^{-i\omega_0 (n+m) t}\mathrm{d}t}_{=0 \text{ außer
 für n+m=0}}\\
 &=\sum_{n,m=-\infty}^{+\infty} f_n f_m \delta_{n,-m}\\
 &=\sum_{n=-\infty}^{+\infty} f_n f_{-n}\\
@@ -2511,7 +2515,7 @@ Wellenterm)}
 \end{align}
 analog für kontinuierliche Spektren
 \begin{align}
-\overline{f^2(t)}&=\frac{2}{2\pi}\int_0^\infty d\omega |f(\omega)|^2\\
+\overline{f^2(t)}&=\frac{2}{2\pi}\int_0^\infty \mathrm{d}\omega |f(\omega)|^2\\
 \text{Bedingungen:}&\\
 &f(\omega)\underset{\omega\rightarrow\infty}{\longrightarrow}0\\
 &f(\omega)\underset{\omega\rightarrow0}{\longrightarrow} \text{ endlich}
@@ -2519,18 +2523,18 @@ analog für kontinuierliche Spektren
 Auch statische Felder lassen sich nach fourierkomponenten zerlegen:
 Basistransformation $e^{i\vec{k}\vec{x}}$
 \begin{align}
-\phi(\vec{x})=\int_{-\infty}^{+\infty} \frac{d^3k}{(2\pi)^3}
+\phi(\vec{x})=\int_{-\infty}^{+\infty} \frac{\mathrm{d}^3k}{(2\pi)^3}
 e^{i\vec{k}\vec{x}}\tilde{\phi}(\vec{k})\\
-\phi(\vec{k})=\int_{-\infty}^{+\infty} d^3x
+\phi(\vec{k})=\int_{-\infty}^{+\infty} \mathrm{d}^3x
 e^{i\vec{k}\vec{x}}\phi(\vec{x})
 \end{align}
 \subsubsection{Feld einer Punktladung}
 Poissongleichung: $\laplace\phi=-4\pi e \delta^{(3)}(\vec{x})$
 \begin{align}
-\laplace\phi=\frac{1}{(2\pi)^3}\int_{-\infty}^{+\infty} d^3k e^{i\vec{k}\vec{x}}
+\laplace\phi=\frac{1}{(2\pi)^3}\int_{-\infty}^{+\infty} \mathrm{d}^3k e^{i\vec{k}\vec{x}}
 \tilde{\phi}(\vec{k})(i\vec{k})^2\\
 \Rightarrow \tilde{\laplace \phi}(\vec{k})=-\vec{k}^2 \tilde{\phi}(\vec{k})\\
-\tilde{\laplace \phi}(\vec{k})=\int_{-\infty}^{+\infty}d^3x e^{-i\vec{k}\vec{x}}
+\tilde{\laplace \phi}(\vec{k})=\int_{-\infty}^{+\infty}\mathrm{d}^3x e^{-i\vec{k}\vec{x}}
 \underbrace{(\laplace\phi(\vec{k})}_{-4\pi e \delta^{(3)}(\vec{x})}\\
 =-4\pi e
 \end{align}
@@ -2539,7 +2543,7 @@ Poissongleichung für Fouriertransformation von $\phi$: $\tilde{\phi}$
 \vec{k}^2\tilde{\phi}(\vec{k})&=4\pi e\\
 \Rightarrow \text{Lösung:} \tilde{\phi}&=\frac{4\pi e}{\vec{k}^2}\\
 \phi(\vec{x})&\text{ inverse Fouriertransformation}\\
-\phi(\vec{x})&=\frac{4\pi e}{(2\pi)^3}\int d^3k
+\phi(\vec{x})&=\frac{4\pi e}{(2\pi)^3}\int \mathrm{d}^3k
 \frac{e^{i\vec{k}\vec{x}}}{\vec{k}^2}
 \end{align}
 \subparagraph{Fouriertransformierte des Elektrischen Feldes}
@@ -2569,24 +2573,29 @@ Wellengleichung: $\ddot{\vec{A}}_{\vec{k}}+c^2\vec{k}^2\vec{A}_{\vec{k}}=0$\\
 Feldkonfiguration: $\vec{A}(\vec{x},t)\longrightarrow\vec{A}_{\vec{k}}(t)$\\
 Berechne Energie der Felder
 \begin{align}
-\epsilon&=\frac{1}{8\pi}\int d^3x\left(\vec{E}^2+\vec{B}^2\right)\\
+\epsilon&=\frac{1}{8\pi}\int \mathrm{d}^3x\left(\vec{E}^2+\vec{B}^2\right)\\
 \vec{E}&=-\frac{1}{c}\dot{\vec{A}}=-\frac{1}{c}
 \sum_{\vec{k}}\dot{\vec{A}}_{\vec{k}}e^{i\vec{k}\vec{x}}\\
 \vec{B}&=\vec{\nabla}\times\vec{A}=i
 \sum_{\vec{k}}\vec{k}\times\vec{A}_{\vec{k}}e^{i\vec{k}\vec{x}}\\
-\epsilon&=\frac{1}{8\pi c^2}\left( \int d^3x \left(
+\epsilon&=\frac{1}{8\pi c^2}\left( \int \mathrm{d}^3x \left(
 \sum_{\vec{k}}\dot{\vec{A}}_{\vec{k}}e^{i\vec{k}\vec{x}} \right) \left(
 \sum_{\vec{k}}\dot{\vec{A}}_{\vec{k}}e^{i\vec{k}\vec{x}} \right)+\vec{B}^2
 \right)\\
 &=\frac{1}{8\pi c^2}\sum_{\vec{k}\vec{k}'}\dot{\vec{A}}_{\vec{k}}
 \dot{\vec{A}}_{\vec{k}'} \int_V e^{i(\vec{k}+\vec{k}')\vec{x}}+\ldots\\
-\text{enthält } \int_0^{L_x}dx e^{i\frac{2\pi}{L_x}n_xx}=%XXXX Fächer
-{L_x \text{ für }n_x=0}{0 \text{ sonst}}\\
+\text{enthält } \int_0^{L_x}\mathrm{d}x e^{i\frac{2\pi}{L_x}n_xx} &=\left\lbrace %XXXX Fächer 
+\begin{array}{l l }
+& L_x \text{ für }n_x=0 \\ 
+& 0 \text{ sonst}
+\end{array}\right.
+%{L_x \text{ für }n_x=0}{0 \text{ sonst}}
+\\
 \Rightarrow V\delta_{n_x+n_x',0}\delta_{n_y+n_y',0}\delta_{n_z+n_z',0}
-\Rightarrow \epsilon=\frac{V}{8\pi c^2}\sum_{\vec{k}}\left(\dot{\vec{A}}_{\vec{k}}
+\Rightarrow \epsilon &=\frac{V}{8\pi c^2}\sum_{\vec{k}}\left(\dot{\vec{A}}_{\vec{k}}
 \dot{\vec{A}}_{-\vec{k}} + \left( \vec{k}\times{\vec{A}}_{\vec{k}}\right)
 \left( \vec{k}\times{\vec{A}}_{-\vec{k}}\right) \right)\\
-=\frac{V}{8\pi c^2}\sum_{\vec{k}}|\dot{\vec{A}}_{\vec{k}}|^2+c^2
+&=\frac{V}{8\pi c^2}\sum_{\vec{k}}|\dot{\vec{A}}_{\vec{k}}|^2+c^2
 \vec{k}^2|{\vec{A}}_{\vec{k}}|^2\\
 \end{align}
 
@@ -2604,7 +2613,7 @@ F^{\mu\nu}=\partial^\mu A^\nu-\partial^\nu A^\mu\\
 Der Einfachheit halber konzentrieren wir uns hier auf das skalare Potential.
 \begin{align}
 \laplace\phi-\frac{1}{c^2}\ddot{\phi}=-4\pi\rho\\
-\rho=\underline{de}(t')\delta(\vec{x}') \text{ Ladung in einem infinietisemalen
+\rho=\underline{\mathrm{d}e}(t')\delta(\vec{x}') \text{ Ladung in einem infinietisemalen
 Volumenelement}\\
 \frac{1}{R^2}\frac{\partial}{\partial R} \left( R^2 \frac{\partial\phi}{\partial
 R}\right)-\frac{1}{c}\frac{\partial^2}{\partial t^2}\phi=0 \text{ für }R\neq0\\
@@ -2621,15 +2630,15 @@ Physikalisch relevant sind nur die retardierten Lösungen
 \end{align}
 Verlange für $R\rightarrow0$ in das Coulombpotential übergehen muss\\
 \begin{align}
-\Rightarrow \phi=\frac{de\left(t-\frac{R}{c}\right)}{R}
+\Rightarrow \phi=\frac{\mathrm{d}e\left(t-\frac{R}{c}\right)}{R}
 \end{align}
 dies gilt für eine infinetisemale Ladung. Für beliebige Ladugnsverteilungen gilt
-die Superposition der $de$-Lösungen.
+die Superposition der $\mathrm{d}e$-Lösungen.
 \begin{align}
-\phi(\vec{x},t)=\int d^3x'
+\phi(\vec{x},t)=\int \mathrm{d}^3x'
 \frac{1}{R}\rho\left(\vec{x}',t-\frac{R}{c}\right)+\phi_0\\
 \vec{A}(\vec{x},t)=\frac{1}{c}\int
-d^3x'\frac{1}{R}\vec{j}\left(\vec{x}',t-\frac{R}{c}\right)+\vec{A}_0\\
+\mathrm{d}^3x'\frac{1}{R}\vec{j}\left(\vec{x}',t-\frac{R}{c}\right)+\vec{A}_0\\
 \vec{R}=\vec{x}-\vec{x}'
 \end{align}
 die sind die Retardierten Potentiale. Hier sind $\phi_0$ und $\vec{A}_0$ die
@@ -2668,7 +2677,7 @@ Komponentenweise
 \end{align}
 \subparagraph{Alternative Herleitung}
 \begin{align}
-\phi(\vec{x},t)=\int d^3x' \frac{1}{R}
+\phi(\vec{x},t)=\int \mathrm{d}^3x' \frac{1}{R}
 \underbrace{\rho(\vec{x}',t-\frac{R}{c})}_{=e
 \delta(\vec{x}'-\vec{x}_0(t')\text{ , }t'=t-\frac{R}{c}} \text{ ,
 }R=|\vec{x}-\vec{x}'|
@@ -2676,12 +2685,12 @@ Komponentenweise
 Problem: Der $x'$-Integrand ist nicht direkt WS-Abhängig via $t'$
 Trick: 
 \begin{align}
-\phi=\int d^3x' dt' \delta\left(t-t'-\frac{|\vec{x}-\vec{x}'|}{c}\right)
+\phi=\int \mathrm{d}^3x' \mathrm{d}t' \delta\left(t-t'-\frac{|\vec{x}-\vec{x}'|}{c}\right)
 \frac{\rho(\vec{x}',t')}{|\vec{x}-\vec{x}'|}\\
 \end{align}
 Nun lassen sich $\vec{x}'$ und $t'$ unabhängigvoeinander Integrieren
 \begin{align}
-\phi=\int dt' \delta\left(t-t'-\frac{|\vec{x}-\vec{x}_0(t')|}{c}\right)
+\phi=\int \mathrm{d}t' \delta\left(t-t'-\frac{|\vec{x}-\vec{x}_0(t')|}{c}\right)
 \frac{e}{|\vec{x}-\vec{x}_0(t')|}\\
 \end{align}
 Nun muss $\delta$ umgeschrieben werden
@@ -2690,7 +2699,7 @@ Nun muss $\delta$ umgeschrieben werden
 }g(x)}\frac{\delta(x-x_0)}{|g'(x_0)|}\\
 \hat{t}=t'+\frac{|\vec{x}-\vec{x}_0(t')|}{c}\\
 \Rightarrow \delta(t-\hat{t})\\
-\frac{d\hat{t}}{dt'}=\ldots=-\frac{\vec{\beta}\vec{R}}{R}\\
+\frac{\mathrm{d}\hat{t}}{\mathrm{d}t'}=\ldots=-\frac{\vec{\beta}\vec{R}}{R}\\
 \Rightarrow \phi=\frac{e}{R-\vec{R}\vec{\beta}}
 \end{align}
 Für die resultierenden Felder ergibt sich nun:
@@ -2698,7 +2707,7 @@ Für die resultierenden Felder ergibt sich nun:
 \vec{E}=-\frac{1}{c}\dot{\vec{A}}-\vec{\nabla}\phi\\
 \vec{B}=\vec{\nabla}\times\vec{A}
 \end{align}
-Problem: Man beötigt Ableitungen nach $\vec{x}$ und $t$, aber $\phi$ und
+Problem: Man benötigt Ableitungen nach $\vec{x}$ und $t$, aber $\phi$ und
 $\vec{A}$ sind über $t'$ definiert.\\
 Abhängigkeiten:
 \begin{align}
@@ -2778,8 +2787,8 @@ Zeit und Raumkoordinaten $t\pm\frac{R}{c}$\\
 für Coulombfeld $\phi\propto\frac{\chi(t-\frac{R}{c})}{R}$\\
 allgmeine Lösung: retariderte Potentiale:\\
 \begin{align}
-\phi(\vec{x},t)=\int d^3x' \frac{1}{R}\phi(\vec{x}',t-\frac{R}{c})+\phi_0\\
-\vec{A}(\vec{x},t)=\frac{1}{c}\int d^3x'
+\phi(\vec{x},t)=\int \mathrm{d}^3x' \frac{1}{R}\phi(\vec{x}',t-\frac{R}{c})+\phi_0\\
+\vec{A}(\vec{x},t)=\frac{1}{c}\int \mathrm{d}^3x'
 \frac{1}{R}\vec{j}(\vec{x}',t-\frac{R}{c})+\vec{A}_0\\
 \text{mit Signalgeschwindigeit }t=\frac{|\vec{x}-\vec{x}'|}{c} \text{ und }
 R=|\vec{x}-\vec{x}'|
@@ -2795,7 +2804,7 @@ Lienard-Wiechert:
 \subsubsection{Strahlungsfeld in großem Abstand}
 Ladungen undStröme in begrentztem Raumgebiet\\
 %XXXX Einfügen von Grafik Z3
-Ladungselement $de=\rho d^3x'$\\ am Ort $\vec{x}'$\\
+Ladungselement $\mathrm{d}e=\rho \mathrm{d}^3x'$\\ am Ort $\vec{x}'$\\
 Abstand $R=|\vec{x}-\vec{x}'|$ sei groß ($R>>|\vec{x}'|$,
 $|\vec{x}'|\underset{<}{\approx}a$)
 Entwicklung nach Potenzen von $\frac{|\vec{x}'|}{R}$
@@ -2807,9 +2816,9 @@ R=r-\vec{v}\vec{x}' \text{ , }\vec{n}=\frac{\vec{x}}{|\vec{x}|}
 Ersetze $R\rightarrow r$ im Nenner\\
 $n$ in Zeitargument von $\rho$,$\vec{j}$ ist nicht "`kontrolliert"'
 \begin{align}
-\Rightarrow \phi(\vec{x},t)=\frac{1}{r}\int d^3x'
+\Rightarrow \phi(\vec{x},t)=\frac{1}{r}\int \mathrm{d}^3x'
 \rho(\vec{x}',t-\frac{r-\vec{n}\vec{x}'}{c})\\
-\vec{A}(\vec{x},t)=\frac{1}{rc}\int d^3x'
+\vec{A}(\vec{x},t)=\frac{1}{rc}\int \mathrm{d}^3x'
 \vec{j}(\vec{x}',t-\frac{r}{c}+\frac{\vec{n}\vec{x}'}{c})
 \end{align}
 Frage: Zeitabhängigkeit von $\rho$\\
@@ -2833,19 +2842,19 @@ a \ll cT \\
 \end{align}
 Fourierzerlegung $\rightarrow$ spektrale Vertielung des abgestrahlten Feldes\\
 Fouriertransformation von $\vec{j}$: $\rightarrow
-\vec{j}(\vec{x},\omega)=\int dt e^{i\omega t} \vec{j}(\vec{x},t)$
+\vec{j}(\vec{x},\omega)=\int \mathrm{d}t e^{i\omega t} \vec{j}(\vec{x},t)$
 \begin{align}
 \vec{j}(\vec{x},t-\frac{r}{c}+\frac{\vec{n}\vec{x}'}{c})=\int
-\frac{d\omega}{2\pi} e^{-i\omega (t-\frac{r}{c}+\frac{\vec{n}\vec{x}'}{c})}
+\frac{\mathrm{d}\omega}{2\pi} e^{-i\omega (t-\frac{r}{c}+\frac{\vec{n}\vec{x}'}{c})}
 \vec{j}(\vec{x}',\omega)\\
-\text{daraus} \vec{A}(\vec{x},\omega)=\int dt e^{i\omega t} \vec{A}(\vec{x},t)\\
-=\int dt e^{i\omega t} \frac{1}{cr} \int d^3x'\int \frac{d\omega'}{2\pi} 
+\text{daraus} \vec{A}(\vec{x},\omega)=\int \mathrm{d}t e^{i\omega t} \vec{A}(\vec{x},t)\\
+=\int \mathrm{d}t e^{i\omega t} \frac{1}{cr} \int \mathrm{d}^3x'\int \frac{\mathrm{d}\omega'}{2\pi} 
 e^{-i\omega (t-\frac{r}{c}+\frac{\vec{n}\vec{x}'}{c})}
 \vec{j}(\vec{x}',\omega')\\
-\text{ mit } \int dt e^{it(\omega-\omega')}=2\pi \delta(\omega-\omgea')\\
-\vec{A}(\vec{x},\omega)=\frac{1}{cr} \int d^3x' e^{i\omega
+\text{ mit } \int \mathrm{d}t e^{it(\omega-\omega')}=2\pi \delta(\omega-\omega')\\
+\vec{A}(\vec{x},\omega)=\frac{1}{cr} \int \mathrm{d}^3x' e^{i\omega
 (\frac{r}{c}-\frac{\vec{n}\vec{x}'}{c})} \vec{j}(\vec{x}',\omega')\\
-=\frac{e^{ikr}}{cr} \underbrace{\int d^3x'
+=\frac{e^{ikr}}{cr} \underbrace{\int \mathrm{d}^3x'
 e^{-i\vec{k}\vec{x}'}}_{\text{Foriertransformation bezüglich }\vec{x}'}\\
 \end{align}
 Diese Gleichung stellt eine Kugelwelle dar.\\
@@ -2861,11 +2870,11 @@ Wellengleichung: $e^{i\left(kx-\omega t\right)}$
 Zu der Zeitskala $T$ gehört zwangsläufig eine Längenskala ($cT\approx\lambda$), die
 eine typische Wellenlänge festlegt, die zu dem von uns betrachtetem System
 gehört. Mit $\lambda=\frac{2\pi c}{\omega}$ ergibt sich die Annahme
-$\frac{r}{\lambda}>>1$ was ausagt, dass die typische Wellenlänge klein ist
+$\frac{r}{\lambda}>>1$ was aussagt, dass die typische Wellenlänge klein ist
 bezüglich des Abstandes des Beobachters von dem Ladungssystem ($\lambda \ll r$),
 diesen Bereich nennt man Wellenzone.\\
 In großem Abstand und für $\lambda \ll r$ (d.h. in der Wellenzone) sind $\vec{E}$
-und $\vec{B}$ nährungsweise ebene Wellen.
+und $\vec{B}$ näherungsweise ebene Wellen.
 \begin{itemize}
   \item characteristische Eigenschaft: \\ \begin{equation}
   \vec{E},\vec{B}\propto \frac{1}{r}
@@ -2878,23 +2887,23 @@ Strahlungsfeld eine bewegten Punktladung
 \text{mit }R=r-\vec{n}\vec{x}' &
 t'=\frac{\vec{x}_0(t')\vec{n}}{c}=t-\frac{r}{c}\\
 \text{Punktladung: } \vec{j}=e\vec{v}(t')\delta(\vec{x}'-\vec{x}_0(t'))\\
-\vec{j}(\omega)=\int dt' \vec{j} e^{i\omega t'}\\
-\Rightarrow \vec{A}(\omega)=e*\frac{e^{ikr}}{cr}\int dt' \vec{v}(t')e^{i\left(
+\vec{j}(\omega)=\int \mathrm{d}t' \vec{j} e^{i\omega t'}\\
+\Rightarrow \vec{A}(\omega)=e*\frac{e^{ikr}}{cr}\int \mathrm{d}t' \vec{v}(t')e^{i\left(
 \omega t'-\vec{k}\vec{x}_0(t') \right)}\text{ ,
-}\vec{v}=\frac{d\vec{x}_0}{dt'}\\
-=e*\frac{e^{ikr}}{cr}\int_{\text{Bahnkurve}} d\vec{x}_0 e^{i\left(
+}\vec{v}=\frac{\mathrm{d}\vec{x}_0}{\mathrm{d}t'}\\
+=e*\frac{e^{ikr}}{cr}\int_{\text{Bahnkurve}} \mathrm{d}\vec{x}_0 e^{i\left(
 \omega t'(\vec{x}_0)-\vec{k}\vec{x}_0 \right)}
 \end{align}
 \subsubsection{Intensität des Strahlungsfeldes}
-Die Intensität ist die Energie pro Zeit pro Fläche, $r^2d\Omega$\\
+Die Intensität ist die Energie pro Zeit pro Fläche, $r^2\mathrm{d}\Omega$\\
 Pointing-Vektor 
 \begin{align}
 \vec{S}=\frac{c}{4\pi}B^2\vec{n}\\
-dI=\frac{c}{4\pi}\overline{B^2}r^2d\Omega\\
-\Rightarrow \frac{dI}{d\Omega}= \text{unabhängig von }r\\
+\mathrm{d}I=\frac{c}{4\pi}\overline{B^2}r^2\mathrm{d}\Omega\\
+\Rightarrow \frac{\mathrm{d}I}{\mathrm{d}\Omega}= \text{unabhängig von }r\\
 \Rightarrow \text{spektrale Intensitätsvertielung}\\
-dI(\vec{n},\omega)=\frac{c}{2\pi}|\vec{B}(\omega)|^2r^2d\Omega
-\frac{d\omega}{2\pi}
+\mathrm{d}I(\vec{n},\omega)=\frac{c}{2\pi}|\vec{B}(\omega)|^2r^2\mathrm{d}\Omega
+\frac{\mathrm{d}\omega}{2\pi}
 \end{align} 
 
 \subsubsection{Wiederholung Strahlung}
@@ -2914,11 +2923,11 @@ Charakterisierung der Quelle\\
 retardierte Potnetiale
 \begin{align}
 \vec{A}(\vec{x},t)=\underset{\text{großer Abstand } r\gg a}{
-\frac{1}{cr}\intd^3x'
+\frac{1}{cr}\int\mathrm{d}^3x'
 \vec{j}(\vec{x}',t-\frac{r}{c}+\frac{\vec{n}\vec{x}'}{c})} 
 \end{align}
 Fourierzerlegung
-$\vec{A}(\vec{x}',\omega)=\frac{e^{ikr}}{cr}\intd^3x'e^{i\vec{k}\vec{x}}\vec{j}(\vec{x}',\omega)$\\
+$\vec{A}(\vec{x}',\omega)=\frac{e^{ikr}}{cr}\int\mathrm{d}^3x'e^{i\vec{k}\vec{x}}\vec{j}(\vec{x}',\omega)$\\
 Systematische Entwicklung von $e^{i\vec{k}\vec{x}}$\\
 Forderung: \begin{align}
 \vec{k}\vec{x}'\ll1\\
@@ -2939,7 +2948,7 @@ $\lambda \gg a \simeq r$ was die komplexer zu beschreibende Nahzone
 charakterisisert.\\
 \paragraph{erster Term der Nährung}
 \begin{align}
-\vec{A}(\vec{x},t)=&\frac{1}{cr}\intd^3x' \vec{j}(\vec{x}',t-\frac{r}{c})\\
+\vec{A}(\vec{x},t)=&\frac{1}{cr}\int\mathrm{d}^3x' \vec{j}(\vec{x}',t-\frac{r}{c})\\
 &r=|\vec{x}| \text{ unabhängig von }\vec{x}'
 \end{align}
 z.B. bewegte Punktladungen $\vec{j}=\sum e\vec{v}
@@ -2952,17 +2961,17 @@ e\vec{x}(t')}_{\vec{D} \text{ Dipolmoment}}\\
 \rightarrow \vec{B}&=\frac{1}{c^2r}\ddot{\vec{D}}\times\vec{n}\\
 \vec{B}&=\frac{1}{c^2r}\left(\ddot{\vec{D}}\times\vec{n}\right)\times\vec{n}\\
 \end{align}
-Diese Gleichungen beschreiben die sognenannte Dipolstrahlung.
+Diese Gleichungen beschreiben die sogenannte Dipolstrahlung.
 \subparagraph{Bemerkungen}
 \begin{itemize}
   \item $\vec{D}\propto\vec{x}' \Rightarrow
   \vec{E}\text{,}\vec{B}\propto\ddot{\vec{x}}',$\\ nur beschleunigte Ladungen
   strahlen. Gleichförmig bewegte Ladungen strahlen nicht. Dies lässt sich
-  ebenfalls einfach aus dem Relativitätsprinziep heleiten.
+  ebenfalls einfach aus dem Relativitätsprinzip herleiten.
   \item für ein System von Ladungen mit $\frac{e}{m}$ konstant gilt:\\
   $\vec{D}=\sum e_i\vec{x}_i'=\frac{e_j}{m_j}\sum
   m_i\vec{x}_i'=\frac{e}{m}\vec{X}M$\\ falls ein solches System nach
-  außen kräftfrei ist kann es ebenfalls nicht strahlen, auch wenn die Teilchen
+  außen kräftefrei ist kann es ebenfalls nicht strahlen, auch wenn die Teilchen
   sich gegenseitig beschleunigen.
 \end{itemize}
 
@@ -2971,7 +2980,7 @@ Diese Gleichungen beschreiben die sognenannte Dipolstrahlung.
 \mathrm{d}I&=\frac{1}{4\pi c^3}\big( \underbrace{\ddot{\vec{D}}\times\vec{n}
 }_{\angle(\ddot{\vec{D}},\vec{n})=\theta}\big)^2\mathrm{d}\Omega\\
 &=\frac{1}{4\pi c^3}|\ddot{\vec{D}}|^2
-\underbrace{sin^2(\theta)}_{=0 \text{ f\"ur }\theta=0}\mathram{d}\Omega\\
+\underbrace{\sin^2(\theta)}_{=0 \text{ f\"ur }\theta=0}\mathrm{d}\Omega\\
 \end{align}
 Also gibt es keine Abstrahlung in Richtung $\ddot{\vec{D}}$ und die
 Abstrahlungsleistung ist maximal in Richtung $\perp \ddot{\vec{D}}$\\
@@ -2979,8 +2988,8 @@ Für die Gesamtintensität ergibt sich:
 \begin{align}
 I&=\intd I=\frac{1}{4\pi
 c^3}\underbrace{|\ddot{\vec{D}}|^2}_{\substack{\text{falls } \ddot{\vec{D}}\\
-\text{ unabhängig von }\Theta}} \underbrace{\intd \Omega
-sin(\theta)}_{=8\pi/3}\\
+\text{ unabhängig von }\Theta}} \underbrace{\int\mathrm{d} \Omega
+\sin(\theta)}_{=8\pi/3}\\
 &=\frac{2}{3c^3}|\ddot{\vec{D}}|^2
 \end{align}
 \subparagraph{Spektrum}
@@ -2996,15 +3005,15 @@ Hertzscher Dipol
 Eigenschaften des Hertzschen Dipols:
 \begin{itemize}
   \item $\mathrm{d}I\propto \omega^4$
-  \item $\mathrm{d}I\propto sin^2\theta$
+  \item $\mathrm{d}I\propto \sin^2\theta$
 \end{itemize}
 \paragraph{Höhere Terme der Entwicklung}
 \begin{align}
-\vec{A}(\vec{x},t)&=\frac{1}{cr}\intd^3x'
+\vec{A}(\vec{x},t)&=\frac{1}{cr}\int\mathrm{d}^3x'
 \vec{j}(\vec{x}',t-\frac{r}{c}+\frac{\vec{n}\vec{x}'}{c})\\
-&= \frac{1}{cr}\intd^3x'
+&= \frac{1}{cr}\int\mathrm{d}^3x'
 \vec{j}(\vec{x}',t-\frac{r}{c})+\frac{1}{rc^2}\frac{\partial}{\partial
-t'}\intd^3x' \vec{n}\vec{x}'\vec{j}(\vec{x}',\underbrace{t-\frac{r}{c}}_{=t'})
+t'}\int\mathrm{d}^3x' \vec{n}\vec{x}'\vec{j}(\vec{x}',\underbrace{t-\frac{r}{c}}_{=t'})
 \end{align}
 für bewegte Punktladungen $\vec{j}=\sum e\vec{v} \delta(\vec{x'}-\vec{x}_0(t'))$
 ergibt sich eine weiterer Beitrag:
@@ -3041,8 +3050,9 @@ e\vec{x}'(\vec{n}\vec{x}')\propto a\frac{v}{x} \ll a
 Somit ist die Entwicklung gerechtfertigt, da eine implizite Unterdrückung in den
 Größen $\dot{\vec{D}},\dot{\vec{m}},\ddot{\vec{Q}}$ enthalten ist.
 
-\paragraph{Beispiel}\\
-Streuung an einer freien Lading (z.b. Elektron, Ladung e, Masse m) einlaufende
+\paragraph{Beispiel}~
+\\
+Streuung an einer freien Ladung (z.b. Elektron, Ladung e, Masse m) einlaufende
 Ebene monochromatische Welle.\\
 %XXXX Einfügen Grafik z4
 Frage effektiver Streuquerschnitt:
@@ -3055,7 +3065,7 @@ $\mathrm{d}\sigma=$abgestrahlte Energie pro Raumwinkel in gegebener Richtung pro
 einfallende Energiefluß.\\
 einlaufende Strahlung
 \begin{align}
-\vec{E}=\vec{E}_0 cos(\vec{r}\vec{k}-\omega t -\alpha)\ \Rightarrow\ 
+\vec{E}=\vec{E}_0 \cos(\vec{r}\vec{k}-\omega t -\alpha)\ \Rightarrow\ 
 \vec{B}\ldots
 \end{align}
 Damit folgt für die Lorentzkraft:
@@ -3065,7 +3075,7 @@ Damit folgt für die Lorentzkraft:
 Das bedeutet für schwache Felder gilt:\\
 $\Rightarrow$Bewegungsgleichung
 \begin{align}
-m\ddot{\vec{x}}=e\vec{E}=e\vec{E}_0 cos(\omega t -\alpha)\\
+m\ddot{\vec{x}}=e\vec{E}=e\vec{E}_0 \cos(\omega t -\alpha)\\
 \ddot{\vec{D}}=\frac{e^2}{m}\vec{E}\\
 \Rightarrow \mathrm{d}I=\frac{1}{4\pi c^3}\left|
 \ddot{\vec{D}}\times\vec{n}' \right|^2 \mathrm{\Omega}
@@ -3073,14 +3083,14 @@ m\ddot{\vec{x}}=e\vec{E}=e\vec{E}_0 cos(\omega t -\alpha)\\
 einlaufende Welle normiert auf $\vec{S}=\frac{c}{4\pi}|\vec{E}|^2\vec{n}$\\
 $\Rightarrow$Streuquereschnitt\\
 \begin{align}
-\mathrm{d}\sigma = \left(\frac{e^2}{mc^2} \right)^2 sin^2(\theta)
+\mathrm{d}\sigma = \left(\frac{e^2}{mc^2} \right)^2 \sin^2(\theta)
 \mathrm{d}\Omega
 \end{align}
 mit dem Streuwinkel $\theta=\angle(\vec{E},\vec{n}')$ folgt der\\
 totaler Streuquerschnitt
 \begin{align}
-\sigma=\intd\sigma=\left(\frac{e^2}{mc^2} \right)^2\int_{-1}^{+1}
-\mathrm{d}cos\theta \int_0^{2\pi}\mathrm{d}\phi sin^2(\theta)
+\sigma=\int\mathrm{d}\sigma=\left(\frac{e^2}{mc^2} \right)^2\int_{-1}^{+1}
+\mathrm{d}\cos\theta \int_0^{2\pi}\mathrm{d}\phi \sin^2(\theta)
 \end{align}
 
 Thomson-Streuquerschnitt
@@ -3103,14 +3113,14 @@ $\vec{e}\perp\vec{n}$\\
 $\longrightarrow$ Mittelung über $\vec{e}$ von $\left( |\vec{e}\times\vec{n}'|^2
 \right)$
 \begin{align}
-sin^2(\theta)&=1-cos^2(\theta)\\
+\sin^2(\theta)&=1-\cos^2(\theta)\\
 &=1-(\vec{e}\vec{n}')\\
 &=1-e_i {n_i}'e_j {n_j}'\\
 &=1-e_ie_j {n_i}'{n_j}'
 \end{align}
 mit der Mittelung über die Polarisation ergibt sich
 \begin{align}
-\overline{sin^2(\theta)}=1-{n_i}'{n_j}' \overline{e_ie_j}
+\overline{\sin^2(\theta)}=1-{n_i}'{n_j}' \overline{e_ie_j}
 \end{align}
 \begin{enumerate}
   \item $e_ie_j$ ist ein symmetrischer Tensor \\ $\Rightarrow\overline{e_ie_j}$
@@ -3126,14 +3136,14 @@ mit der Mittelung über die Polarisation ergibt sich
 \end{enumerate}
 \begin{align}
 \overline{e_ie_j}&=\frac{1}{2}\left(\delta_{ij}-n_in_j \right)\\
-\overline{sin^2\theta}&=1-{n_i}'{n_j}'\frac{1}{2}\left(\delta_{ij}-n_in_j
+\overline{\sin^2\theta}&=1-{n_i}'{n_j}'\frac{1}{2}\left(\delta_{ij}-n_in_j
 \right)\\
 &=\frac{1}{2}+\frac{1}{2}\underbrace{\left( \vec{n}\vec{n}'
-\right)^2}_{cos\theta}\\
-\Rightarrow d\sigma&\sim1+cos^2\theta
+\right)^2}_{\cos\theta}\\
+\Rightarrow \mathrm{d}\sigma&\sim1+\cos^2\theta
 \end{align}
 Was eine der Kugelflächenfunktionen ist.
-\paragraph{Beipiel einer Ladung auf einer Kreisbahn}\\
+\paragraph{Beipiel einer Ladung auf einer Kreisbahn}~\\
 Teilchenbeschleuniger\\
 Synchrotronstrahlung\\
 Ladung $e$, Masse $m$, Magnetfeld $B$\\
@@ -3155,8 +3165,8 @@ der Beschleunigerebene
 \begin{align}
 \vec{A}(\omega)&=\frac{e^{ikr}}{cr}\int_{\text{Bahnkurve}}\mathrm{d}\vec{x}_0
 e^{i(\omega t-\vec{k}\vec{x}_0)}\\
-\rightarrow \text{Integrale vom Typ} &\int_0^{2\pi}\mathrm{d}\phi*sin(\phi)
-e^{ik(\phi-\beta cos(\theta)sin(\theta))}\\&\text{  (Besselfunktionen)}
+\rightarrow \text{Integrale vom Typ} &\int_0^{2\pi}\mathrm{d}\phi*\sin(\phi)
+e^{ik(\phi-\beta \cos(\theta)\sin(\theta))}\\&\text{  (Besselfunktionen)}
 \end{align}
 
 \section{Feldtheorie der Gravitation - Allgemeine Relativitätsthorie}
@@ -3177,20 +3187,20 @@ G&=\text{Graavitationskonstante}
 vergleiche beide Kräfte für ein Proton: $\frac{F_G}{F_C}\approx10^{-36}$\\
 Potential $\phi_G=\frac{GM}{r}$\\
 für \underline{Quelle} der \underline{Masse} $M$\\
-Die Bewegungsgleichungen würe man dann aus den entsprechenden Lagrangefunktnen
+Die Bewegungsgleichungen würde man dann aus den entsprechenden Lagrangefunktnen
 gewinnen.
 \begin{align}
 L&=T-V\\
 &=\frac{1}{2}m_Tv^2-m_S\phi_G
 \end{align}
-Im Vergleich zur elektrostatischen Wechselwirkung wirk dies naiv. Aus der
+Im Vergleich zur elektrostatischen Wechselwirkung wirkt dies naiv. Aus der
 Elektrostatik ergibt sich.
 \begin{align}
 L_{EM}&=\frac{1}{2}m_Tv^2-e\phi_{EM}
 \end{align}
 Wobei $m_S$ und $e$ hier als Kopplungskonstanten fungieren.
 Man muss beachten, dass auch der Geschwindigkeitsterm ein $m_T$ enthält, deren
-Gleicheit mit dem $m_S$ der Kopplung mit dem Feld nicht trivial ist. Das $m_T$
+Gleichheit mit dem $m_S$ der Kopplung mit dem Feld nicht trivial ist. Das $m_T$
 des Geschwindigkeitsterms besagt wie stark eine wirkende Kraft in der Lage ist ein
 Teilchen zu beschleunigen, es trifft eine Aussage über die Trägheit der Masse.
 Das $m_S$ der Kopplung wiederum besagt wie stark das Teilchen in der Lage ist
@@ -3203,14 +3213,14 @@ Bewegungsgleichung aufschreibt.
 m_T \dot{\vec{v}}=-m_S \vec{\nabla}\phi_G
 \Rightarrow \dot{\vec{v}}=- \vec{\nabla}\phi_G
 \end{align}
-Dies ist eine nicht triviale Folgerung, da in dieser Bewegungleichung die Masse
+Dies ist eine nicht triviale Folgerung, da in dieser Bewegungsgleichung die Masse
 des bewegten Teilchens keine Rolle spielt. Dies wird als Äquivalenzprinzip der
-Allgemeinen Relativitätsthorie bezeichnet. Diese erste Formulierung stellt das
-schwache Äquivalenzprinzip der Allgemeinen Relativitätsthorie dar:\\
+Allgemeinen Relativitätstheorie bezeichnet. Diese erste Formulierung stellt das
+schwache Äquivalenzprinzip der Allgemeinen Relativitätstheorie dar:\\
 %\center{Die Träge und die Schwere Masse ist gleich.}
 %XXXX change that that it works
 \\
-\paragraph{nun ein Beispiel:}\\
+\paragraph{nun ein Beispiel:}~\\
 Betrachte ein System von Massen in einem homogenenem Gravitatinsfeld.
 Wenn man massen in ein homogenes Gravitationsfeld setzt so werden diese durch
 das anliegende Gravitationsfeld und Wechselwirkungskräfte aufeinander
@@ -3219,37 +3229,37 @@ $\vec{F}_{ij}$
 m_i \dot{\vec{v}}_i&=-m_i\vec{\nabla}\phi+\sum_{j=1,i\neq j}^N\vec{F}_{ij}\\
 m_i (\dot{\vec{v}}_i+\vec{\nabla}\phi)&=\sum_{j=1,i\neq j}^N\vec{F}_{ij}\\
 \end{align}
-Führt man nun eine Koordinatentransformation durch, so daß
+Führt man nun eine Koordinatentransformation durch, so dass
 \begin{align}
 \dot{\vec{v}}{}'&=\dot{\vec{v}}_i+\vec{\nabla}\phi\\
 \vec{x}_i{}'&=\vec{x}_i+\frac{1}{2}\vec{\nabla}\phi t^2\\
 \Rightarrow m_i\vec{v}_i{}'&=\sum_{j=1,i\neq j}^N\vec{F}_{ij}\\
 \end{align}
 d.h. Bewegungsgleichungen enthalten das Gravitationsfeld \underline{nicht}. Das
-neue Koordinatensystem ist jedoch kein Interialsystem, das durch eine
+neue Koordinatensystem ist jedoch kein Inertialsystem, das durch eine
 Lorentz- oder Galileo-Transformation erreichbar wäre, da dieses
 Koordinatensystem beschleunigt ist.\\
-Darraus folgt das sogenannte starke Äquivalenzprinzip der allgemeinen
+Daraus folgt das sogenannte starke Äquivalenzprinzip der allgemeinen
 Relativitätstheorie.\\
 %XXXX center it
-Ein Gravitationsfeld ist äquivatent zu einer Transformation in ein
+Ein Gravitationsfeld ist äquivalent zu einer Transformation in ein
 Nicht- Inertialsystem.\\
 "lokal": in einem räumlich eingeschränkten Gebiet, das klein genug sein sollte,
-so daß das Gravitationsfeld homogen erscheint (Frage der Genauigkeit).
-Solche Gravitationsfelder, die durch eine Transformation \underline{überberall}
-beseitigt werden können bezeichnet man als scheinbare Graviatationsfelder.
+so dass das Gravitationsfeld homogen erscheint (Frage der Genauigkeit).
+Solche Gravitationsfelder, die durch eine Transformation \underline{überall}
+beseitigt werden können bezeichnet man als scheinbare Gravitationsfelder.
 Während sogenannte wahre Gravitationsfelder sich nur lokal durch eine
 Transformation beseitigen lassen.\\
-Die Allgemeine Relativitätsthorie ist damit eine Theorie der allgemeinen
-Koordinatentransformationen und damit eine ausformulierung der Geometrie von
+Die Allgemeine Relativitätstheorie ist damit eine Theorie der allgemeinen
+Koordinatentransformationen und damit eine Ausformulierung der Geometrie von
 Raum und Zeit.\\ 
 Ein Beispiel dafür wäre ein rotierendes Koordinatensystem:
 \begin{align}
-x&=x'cos(\omega t)-y'sin(\omega t)\\
-y&=x'sin(\omega t)+y'cos(\omega t)\\
+x&=x'\cos(\omega t)-y'\sin(\omega t)\\
+y&=x'\sin(\omega t)+y'\cos(\omega t)\\
 z&=z'
 \end{align}
-Innerhalb der Speziellen Relativitätsthorie müsste man den 4-Abstand
+Innerhalb der Speziellen Relativitätstheorie müsste man den 4-Abstand
 aufschreiben. 
 \begin{align}
 \mathrm{d}s^2&=c^2\mathrm{d}t^2-\mathrm{d}x^2-\mathrm{d}y^2-\mathrm{d}z^2\\
@@ -3280,7 +3290,7 @@ Normalkoordinaten $\xi^\mu$ mit $\mathrm{d}s^2=\eta_{\mu\nu}\mathrm{d}
 $\eta_{\mu\nu}=\text{diag}(1,-1,-1,-1)$\\
 Äquivalenzprinzip (präzise Formulierung)\\
 In jedem Punkt der Raum-Zeit $x_0$ kann man ein Bezugssystem konstruieren, so
-daß
+dass
 \begin{align}
 g_{\mu\nu}(x_0)=\eta_{\mu\nu}, \ \ \ \frac{\partial g_{\mu\nu}(x_0)}{\partial
 x^\alpha}\Big|_{x_0}=0
@@ -3304,7 +3314,7 @@ Radius R\\
 $\rightarrow$ nicht-euklidische Geometrie\\
 Damit ist das Ziel der allgemeinen Relativitätstheorie allgemeine
 Koordinatentransformationen zu finden, die in der Lage sind einen allgemeinen
-Satz von Gleichungen zu liefern, die in jedem der Koordinatensysteme gültigkeit
+Satz von Gleichungen zu liefern, die in jedem der Koordinatensysteme Gültigkeit
 besitzen, also formgleich in allen physikalische relevanten Koordinatensystemen
 sind.\\
 Dies bezeichnete eine Kovariante Formulierung der Physikalischen Gesetze.
@@ -3325,12 +3335,12 @@ Analog: SRT Lorentz-Transformation linear
 \subsubsection{Wiederholung}
 lokale Normalkoordinaten: $\xi^\mu$ und
 $\eta_{\mu\nu}=\text{diag}(1,-1,-1,-1)$\\
-Transforamtion zu allgemeinen Koordinaten:
+Transformation zu allgemeinen Koordinaten:
 \begin{align}
 x^\mu(\xi) \ \ (\text{bzw.} \eta^\mu(x))\\
 \mathrm{d}x^\mu=\frac{\partial x^\mu}{\partial \xi^\nu} \mathrm{d}\xi^\nu 
 \end{align}
-Wobei $\frac{\partial x^\mu}{\partial \xi^\nu}$ funktionen von $\xi$ sind und
+Wobei $\frac{\partial x^\mu}{\partial \xi^\nu}$ Funktionen von $\xi$ sind und
 damit die Transformationsmatrix $\Lambda^\mu{}_\nu$ definieren.\\
 Transformation zischen allgemeinen Koordinaten
 \begin{align}
@@ -3382,13 +3392,13 @@ x^\lambda}{\partial \xi^\mu}\frac{\partial^2 \xi^\mu}{\partial x^\mu
 \partial x^\rho} \ \ \ {}^{\text{Christoffel-Symbole}\leftarrow
 \text{ aus } g_{\mu\nu},\partial g_{\mu\nu}}_{\text{affine connection}}
 \end{align}
-$\rightarrow$ Bewegungsgleicnung in allgemeinen Koordinaten
+$\rightarrow$ Bewegungsgleichung in allgemeinen Koordinaten
 \begin{align}
 \frac{\mathrm{d} u^\lambda}{\mathrm{d}s}=-\Gamma^\lambda_{\nu\rho}u^\nu u^\rho\\
 \end{align}
-Damit lässt sich $\Gamma$ physikalisch als Graviationsfeld interpretieren oder
+Damit lässt sich $\Gamma$ physikalisch als Gravitationsfeld interpretieren oder
 als Ausformung der Gravitationskraft benennen. Damit würde $g_{\mu\nu}$ das
-Graviationspotential beschreiben.\\
+Gravitationspotential beschreiben.\\
 $\Gamma=0$ in jedem Inertialsystem\\
 $\Gamma^\lambda{}_{\nu\rho}$ ist kein Tensor\\
 Bewegungsgleichung $\partial u^\mu=0 \longrightarrow$ kovariante Ableitung:
@@ -3442,13 +3452,13 @@ Die in jedem Koordinatensystem gültig ist.
 \paragraph{Beispiel für einen zweidimensionalen gekrümmten Raum}
 Wir nehmen als Beispiel eine Kugeloberfläche:
 %Füge Bild z7 ein
-Wenn man annimmt, dass der Vektor bei einer Kräftefreien Bewegung seine Richtung
+Wenn man annimmt, dass der Vektor bei einer kräftefreien Bewegung seine Richtung
 nicht ändert. Dann kann man abhängig vom Weg mit verschiedenen Richtungen der
 Vektoren am Nordpol enden. Die ist Paralleltransport entlang von Kurven auf der
 Kugeloberfläche.
 \paragraph{Paralleltransport}
 Transport von Vektoren entlang eines geschlossenen Weges führt zur Änderung des
-Vektors bei bewegung durch einen gekrümmten Raum
+Vektors bei Bewegung durch einen gekrümmten Raum
 \begin{align}
 \mathrm{d}A^\mu &= - \Gamma^\mu_{\nu\lambda} A^\nu \mathrm{d}x^\lambda\\
 \Delta A^\mu &= \oint \mathrm{d} A^\mu\underset{Krümmung}{\neq0}
@@ -3463,7 +3473,7 @@ Tensoreigenschaften besitzt). Man kann dies aus den Größen
 $(\Gamma)^2$ und $\left( \frac{\partial \Gamma}{\partial x} \right)$ oder aus
 $\frac{\partial^2 g}{\partial x\partial x}$ und $g\Gamma\Gamma$ herleiten, was
 allerdings hässlich wird.\\
-Ricci-Tensor $R_{\mu\nu}=g^{\rho\sigma}R_{\mu\rho\nu\sigma}$, der den Vortiel
+Ricci-Tensor $R_{\mu\nu}=g^{\rho\sigma}R_{\mu\rho\nu\sigma}$, der den Vorteil
 hat symmetrisch zu sein ($R_{\mu\nu}=R_{\nu\mu}$)\\
 Und das Krümmungsskalar $R=g^{\mu\nu}R_{\mu\nu}$\\
 Suche kovariante Differentialgleichungen für $g_{\mu\nu}$
@@ -3472,7 +3482,7 @@ Als Quelle des Feldes fungiert hier die Masse, die jedoch alleine nicht
 kovariant ist. Diese muss erweitert werden wobei man zum Energie-Impuls-Tensor
 $T^{\mu\nu}$ gelangt. \\
 (zusätzlich müssen für kleine Geschwindigkeiten und schwache Felder das
-Newtonsche Graviatationsgesetz als Grenzfall heraus kommen.)\\
+Newtonsche Gravitationsgesetz als Grenzfall heraus kommen.)\\
 Es ergeben sich die Einsteingleichungen:
 \begin{align}
 R_{\mu\nu}-\frac{1}{2}g_{\mu\nu}R+\lambda g_{\mu\nu}=\frac{8\pi
